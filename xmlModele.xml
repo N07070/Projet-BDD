@@ -121,8 +121,8 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Epreuve" row="id" />
 </row>
-<row name="Rencontre" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
+<row name="Date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
 <default>NULL</default><relation table="Rencontres" row="id" />
 <comment>NULL si c'est le résultat final et pas juste une rencontre</comment>
 </row>
