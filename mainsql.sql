@@ -1,0 +1,57 @@
+DROP TABLE IF EXISTS EquipesJoueurs;
+DROP TABLE IF EXISTS Resultat;
+DROP TABLE IF EXISTS Joueurs;
+DROP TABLE IF EXISTS Epreuve;
+DROP TABLE IF EXISTS Equipe;
+DROP TABLE IF EXISTS Rencontres;
+DROP TABLE IF EXISTS Sport;
+
+CREATE TABLE Joueurs(
+  id SERIAL PRIMARY KEY,
+  nom VARCHAR(50) NOT NULL,
+  prenom VARCHAR(50) NOT NULL,
+  age INTEGER NOT NULL
+);
+
+CREATE TABLE Rencontres (
+  id SERIAL PRIMARY KEY,
+  date DATE NOT NULL
+);
+
+CREATE TABLE Equipe (
+  id SERIAL PRIMARY KEY,
+  pays VARCHAR(30) NOT NULL
+);
+
+
+CREATE TABLE EquipesJoueurs (
+  id SERIAL PRIMARY KEY,
+  joueur INTEGER NOT NULL REFERENCES Joueurs (id),
+  equipe INTEGER NOT NULL REFERENCES Equipe (id)
+);
+
+
+CREATE TABLE Sport (
+  id SERIAL PRIMARY KEY,
+  nom VARCHAR(50)
+);
+
+
+CREATE TABLE Epreuve (
+  id SERIAL PRIMARY KEY,
+  sexe CHAR(1),
+  nom TEXT NOT NULL,
+  lieu TEXT NOT NULL,
+  sport INTEGER NOT NULL REFERENCES Sport (id)
+);
+
+
+CREATE TABLE Resultat (
+  id SERIAL PRIMARY KEY,
+  Equipe INTEGER REFERENCES Equipe (id),
+  Epreuve INTEGER REFERENCES Epreuve (id),
+  Rencontres INTEGER REFERENCES Rencontres (id),
+  Position INTEGER,
+  Temps TIME,
+  Points INTEGER
+);
