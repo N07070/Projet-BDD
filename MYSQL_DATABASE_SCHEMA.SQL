@@ -7,11 +7,11 @@
 
 -- ---
 -- Table 'Joueurs'
--- 
+--
 -- ---
 
 DROP TABLE IF EXISTS `Joueurs`;
-		
+
 CREATE TABLE `Joueurs` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `Epreuve` INTEGER NOT NULL DEFAULT NULL,
@@ -23,11 +23,11 @@ CREATE TABLE `Joueurs` (
 
 -- ---
 -- Table 'Rencontres'
--- 
+--
 -- ---
 
 DROP TABLE IF EXISTS `Rencontres`;
-		
+
 CREATE TABLE `Rencontres` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `Date` DATE NULL DEFAULT NULL,
@@ -36,11 +36,11 @@ CREATE TABLE `Rencontres` (
 
 -- ---
 -- Table 'Equipe'
--- 
+--
 -- ---
 
 DROP TABLE IF EXISTS `Equipe`;
-		
+
 CREATE TABLE `Equipe` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `Pays` VARCHAR NULL DEFAULT NULL COMMENT 'par exemple FRA',
@@ -49,11 +49,11 @@ CREATE TABLE `Equipe` (
 
 -- ---
 -- Table 'Sport'
--- 
+--
 -- ---
 
 DROP TABLE IF EXISTS `Sport`;
-		
+
 CREATE TABLE `Sport` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `Nom` VARCHAR NULL DEFAULT NULL,
@@ -62,11 +62,11 @@ CREATE TABLE `Sport` (
 
 -- ---
 -- Table 'Epreuve'
--- 
+--
 -- ---
 
 DROP TABLE IF EXISTS `Epreuve`;
-		
+
 CREATE TABLE `Epreuve` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `Sexe` CHAR NULL DEFAULT NULL,
@@ -78,11 +78,11 @@ CREATE TABLE `Epreuve` (
 
 -- ---
 -- Table 'Résultats'
--- 
+--
 -- ---
 
 DROP TABLE IF EXISTS `Résultats`;
-		
+
 CREATE TABLE `Résultats` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `Equipes` INTEGER NULL DEFAULT NULL,
@@ -96,11 +96,11 @@ CREATE TABLE `Résultats` (
 
 -- ---
 -- Table 'EquipesJoueurs'
--- 
+--
 -- ---
 
 DROP TABLE IF EXISTS `EquipesJoueurs`;
-		
+
 CREATE TABLE `EquipesJoueurs` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `Joueur` INTEGER NULL DEFAULT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE `EquipesJoueurs` (
 );
 
 -- ---
--- Foreign Keys 
+-- Foreign Keys
 -- ---
 
 ALTER TABLE `Joueurs` ADD FOREIGN KEY (Epreuve) REFERENCES `Epreuve` (`id`);
