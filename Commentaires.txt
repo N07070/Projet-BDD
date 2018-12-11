@@ -1,0 +1,3 @@
+La table rencontres permet d'avoir les différentes manches d'une même épreuve, et en utilisant un NULL on peut signifier que c'est le résultat final. Permettra de facilement trouver les résultats finaux!
+Le lieu peut faire partie de la table epreuve car le sujet indique que le lieu sera le même pour chaque sport, on choisi epreuve plutot que sport car les differentes catégories d'un sport seront ajoutées à l'épreuve.
+La table équipes rassemble les équipes des sports individuels et collectifs, on pourra facilement exclure les équipes avec plusieurs joueurs

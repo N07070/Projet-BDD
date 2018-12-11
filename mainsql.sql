@@ -10,15 +10,14 @@ CREATE TABLE Joueurs(
   id serial PRIMARY KEY,
   nom varchar(50) NOT NULL,
   prenom varchar(50) NOT NULL,
-  age integer NOT NULL
+  age integer NOT NULL,
+  sex text NOT NULL
 );
-
 
 CREATE TABLE Equipe (
   id serial PRIMARY KEY,
   pays varchar(30) NOT NULL
 );
-
 
 CREATE TABLE EquipesJoueurs (
   id serial PRIMARY KEY,
@@ -26,12 +25,10 @@ CREATE TABLE EquipesJoueurs (
   equipe integer NOT NULL REFERENCES Equipe (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
 CREATE TABLE Sport (
   id serial PRIMARY KEY,
   nom varchar(50)
 );
-
 
 CREATE TABLE Epreuve (
   id serial PRIMARY KEY,
@@ -41,11 +38,10 @@ CREATE TABLE Epreuve (
   sport integer NOT NULL REFERENCES Sport (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-
 CREATE TABLE Rencontres (
   id serial PRIMARY KEY,
   date date
-)
+);
 
 CREATE TABLE Resultat (
   id serial PRIMARY KEY,
