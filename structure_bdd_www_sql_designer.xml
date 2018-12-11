@@ -37,14 +37,10 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="367" y="39" name="Joueurs">
+</datatypes><table x="85" y="50" name="Joueurs">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="Epreuve" null="0" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><relation table="Epreuve" row="id" />
-</row>
 <row name="Nom" null="1" autoincrement="0">
 <datatype>VARCHAR</datatype>
 <default>NULL</default></row>
@@ -58,7 +54,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="195" y="382" name="Rencontres">
+<table x="441" y="464" name="Rencontres">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -69,7 +65,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="224" y="250" name="Equipe">
+<table x="84" y="191" name="Equipe">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -81,7 +77,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="989" y="59" name="Sport">
+<table x="656" y="203" name="Sport">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -92,7 +88,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="740" y="117" name="Epreuve">
+<table x="461" y="208" name="Epreuve">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -113,7 +109,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="466" y="267" name="Résultats">
+<table x="266" y="267" name="Résultats">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -143,7 +139,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="34" y="59" name="EquipesJoueurs">
+<table x="269" y="89" name="EquipesJoueurs">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -160,3 +156,4 @@
 </key>
 </table>
 </sql>
+
