@@ -1,3 +1,4 @@
+-- Supprimer les anciennes tables
 DROP TABLE IF EXISTS EquipesJoueurs;
 DROP TABLE IF EXISTS Resultat;
 DROP TABLE IF EXISTS Joueurs;
@@ -45,7 +46,7 @@ CREATE TABLE Epreuve (
 CREATE TABLE Rencontres (
   id serial PRIMARY KEY,
   date date
-)
+);
 
 CREATE TABLE Resultat (
   id serial PRIMARY KEY,
