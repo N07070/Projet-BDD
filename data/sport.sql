@@ -1,11 +1,22 @@
-insert into sport(nom, collectif) values ('football','true');
-insert into sport(nom, collectif) values ('natation','false');
-insert into sport(nom, collectif) values ('athletisme','false');
-insert into sport(nom, collectif) values ('badminton','false');
-insert into sport(nom, collectif) values ('canoe','false');
-insert into sport(nom, collectif) values ('velo vtt','false');
-insert into sport(nom, collectif) values ('judo','false');
-insert into sport(nom, collectif) values ('rugby','true');
-insert into sport(nom, collectif) values ('beach-volley','true');
-insert into sport(nom, collectif) values ('tennis','true');
-insert into sport(nom, collectif) values ('water-polo','true');
+INSERT INTO Sport (nom) VALUES
+('Football'),
+('Natation'),
+('Athletisme'),
+('Badminton'),
+('Canoe'),
+('Velo vtt'),
+('Judo'),
+('Rugby'),
+('Beach-volley'),
+('Tennis'),
+('Water-polo'),
+('Handball'),
+('Lutte'),
+('Equitation'),
+('Escrime'),
+('Halterophilie'),
+('Plongeon'),
+('Tir'),
+('Tir a l'arc'),
+('Volley-ball'),
+('Rugby');
