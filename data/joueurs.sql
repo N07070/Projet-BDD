@@ -1,44 +1,97 @@
-insert into joueurs(nom,prenom,age,sex) values ('Michael','James','27','m');
-insert into joueurs(nom,prenom,age,sex) values ('Al','Juy','30','m');
-insert into joueurs(nom,prenom,age,sex) values ('Lemaitre','Guy','32','m');
-insert into joueurs(nom,prenom,age,sex) values ('Kerry','Matamoto','21','m');
-insert into joueurs(nom,prenom,age,sex) values ('Thompson','Hagino','25','m');
-insert into joueurs(nom,prenom,age,sex) values ('Maveat','Julie','30','f');
-insert into joueurs(nom,prenom,age,sex) values ('Pezin','Zoe','22','f');
-insert into joueurs(nom,prenom,age,sex) values ('Babakar','Eleonor','19','f');
-insert into joueurs(nom,prenom,age,sex) values ('Xu','Maxime','28','m');
-insert into joueurs(nom,prenom,age,sex) values ('Nader','Jean','27','m');
-insert into joueurs(nom,prenom,age,sex) values ('Lophi','Benjamin','26','m');
-insert into joueurs(nom,prenom,age,sex) values ('Quedy','Lili','27','f');
-insert into joueurs(nom,prenom,age,sex) values ('El-Machin','Philippe','30','m');
-insert into joueurs(nom,prenom,age,sex) values ('Lemaitre','Max','32','m');
-insert into joueurs(nom,prenom,age,sex) values ('Fly','Michael','21','m');
-insert into joueurs(nom,prenom,age,sex) values ('McFaceFacy','Nelson','25','m');
-insert into joueurs(nom,prenom,age,sex) values ('Macron','Brigitte','30','f');
-insert into joueurs(nom,prenom,age,sex) values ('Meluch','Yoda','22','f');
-insert into joueurs(nom,prenom,age,sex) values ('DeBussy','Padmé','19','f');
-insert into joueurs(nom,prenom,age,sex) values ('Zoulou','Obiwan','28','m');
-insert into joueurs(nom,prenom,age,sex) values ('Lbertalia','Palpatine','27','m');
-insert into joueurs(nom,prenom,age,sex) values ('Snapsh','Maxens','26','m');
-insert into joueurs(nom,prenom,age,sex) values ('Viloten','Lili','27','f');
-insert into joueurs(nom,prenom,age,sex) values ('Acabistan','Macao','30','m');
-insert into joueurs(nom,prenom,age,sex) values ('Shlagaman','Valentin','32','m');
-insert into joueurs(nom,prenom,age,sex) values ('Italili','Valy','21','m');
-insert into joueurs(nom,prenom,age,sex) values ('Luo Chang','Jean','25','m');
-insert into joueurs(nom,prenom,age,sex) values ('Hazen','Luci','30','f');
-insert into joueurs(nom,prenom,age,sex) values ('Marx','Luce','22','f');
-insert into joueurs(nom,prenom,age,sex) values ('Anon','Lucy','19','f');
-insert into joueurs(nom,prenom,age,sex) values ('Declacy','Julien','28','m');
-insert into joueurs(nom,prenom,age,sex) values ('Sedon','Jules','27','m');
-insert into joueurs(nom,prenom,age,sex) values ('Belichon','Jean','26','m');
-insert into joueurs(nom,prenom,age,sex) values ('JUlion','Julius','27','f');
-insert into joueurs(nom,prenom,age,sex) values ('Kabla','Ibrahim','30','m');
-insert into joueurs(nom,prenom,age,sex) values ('Rouma','Kavani','32','m');
-insert into joueurs(nom,prenom,age,sex) values ('Rulito','Mbape','21','m');
-insert into joueurs(nom,prenom,age,sex) values ('Zana','Neyhmar','25','m');
-insert into joueurs(nom,prenom,age,sex) values ('Shana','Areola','30','f');
-insert into joueurs(nom,prenom,age,sex) values ('Sarfaty','Julia','22','f');
-insert into joueurs(nom,prenom,age,sex) values ('Lampion','Noah','19','f');
-insert into joueurs(nom,prenom,age,sex) values ('Jacob','Camille','28','m');
-insert into joueurs(nom,prenom,age,sex) values ('Jean','Salah','27','m');
-insert into joueurs(nom,prenom,age,sex) values ('Atlatian','Jean','26','m');
+INSERT INTO Joueurs (nom,prenom,age,sex) VALUES
+('Michael','James','27','m'),
+('Al','Juy','30','m'),
+('Lemaitre','Guy','32','m'),
+('Kerry','Matamoto','21','m'),
+('Thompson','Hagino','25','m'),
+('Maveat','Julie','30','f'),
+('Pezin','Zoe','22','f'),
+('Babakar','Eleonor','19','f'),
+('Xu','Maxime','28','m'),
+('Nader','Jean','27','m'),
+('Lophi','Benjamin','26','m'),
+('Quedy','Lili','27','f'),
+('El-Machin','Philippe','30','m'),
+('Lemaitre','Max','32','m'),
+('Fly','Michael','21','m'),
+('McFaceFacy','Nelson','25','m'),
+('Macron','Brigitte','30','f'),
+('Meluch','Yoda','22','f'),
+('DeBussy','Padmé','19','f'),
+('Zoulou','Obiwan','28','m'),
+('Lbertalia','Palpatine','27','m'),
+('Snapsh','Maxens','26','m'),
+('Viloten','Lili','27','f'),
+('Acabistan','Macao','30','m'),
+('Shlagaman','Valentin','32','m'),
+('Italili','Valy','21','m'),
+('Luo Chang','Jean','25','m'),
+('Hazen','Luci','30','f'),
+('Marx','Luce','22','f'),
+('Anon','Lucy','19','f'),
+('Declacy','Julien','28','m'),
+('Sedon','Jules','27','m'),
+('Belichon','Jean','26','m'),
+('JUlion','Julius','27','f'),
+('Kabla','Ibrahim','30','m'),
+('Rouma','Kavani','32','m'),
+('Rulito','Mbape','21','m'),
+('Zana','Neyhmar','25','m'),
+('Shana','Areola','30','f'),
+('Sarfaty','Julia','22','f'),
+('Lampion','Noah','19','f'),
+('Jacob','Camille','28','m'),
+('Jean','Salah','27','m'),
+('Atlatian','Jean','26','m');
+
+INSERT INTO Joueurs (prenom, nom, sex, age) VALUES
+(Chantay,Sandidge,f,23),
+(Jesus,Suitt,m,19),
+(Leonel,Arreola,m,35),
+(Mitchel,Pelto,m,28),
+(Misty,Kranz,f,23),
+(Tyrone,Hickle,m,22),
+(Basil,Rybicki,m,18),
+(Charline,Brantner,f,27),
+(Jacqualine,Dasher,f,26),
+(Heidy,Walter,f,34),
+(Leanora,Primm,f,20),
+(Albertina,Witherow,f,21),
+(Laurice,Wheatley,f,26),
+(Rhona,Truss,f,25),
+(Leota,Bogue,f,32),
+(Rueben,Redman,m,19),
+(Wendell,Leflore,m,20),
+(Clark,Kinoshita,m,20),
+(Nada,Bussell,f,21),
+(Liane,Lucia,f,24),
+(Georgina,Moser,f,26),
+(Jerrell,Klahn,m,27),
+(Garret,Denning,m,18),
+(Summer,Stokely,f,20),
+(Flor,Ellington,f,25),
+(Aundrea,Volk,f,24),
+(Della,Gouin,f,31),
+(Claudette,Abate,f,21),
+(Rodney,Dively,m,25),
+(Anika,Avitia,f,24),
+(Annita,Cicero,f,31),
+(Joselyn,Hayse,f,27),
+(Yung,Jonason,f,28),
+(Freddy,Campana,m,21),
+(Dyan,Meurer,f,22),
+(Donnie,Tostado,m,25),
+(Alec,Hagen,m,29),
+(Weldon,So,m,20),
+(Beverly,Lindell,f,30),
+(Harmony,Wagener,f,37),
+(Verla,Bouley,f,18),
+(Sterling,Clune,m,21),
+(Breann,Waltman,f,20),
+(Vickey,Batterton,f,27),
+(Marcell,Coppage,f,26),
+(Doria,Rouillard,f,24),
+(Dwight,Knepp,m,28),
+(Manual,Brittingham,m,23),
+(Hilario,Gagner,m,21),
+(Reyes,Kingsley,m,28);
