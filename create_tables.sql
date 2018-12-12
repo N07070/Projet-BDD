@@ -35,7 +35,8 @@ CREATE TABLE EquipesJoueurs (
 -- Catégorie de sport (à discuter si on fait une categorie par ligne de cette table ou un sport dans quel cas il faut ajouter une table pour le sport)
 CREATE TABLE Sport (
   id serial PRIMARY KEY,
-  nom varchar(50)
+  nom varchar(50),
+  collectif boolean NOT NULL DEFAULT true
 );
 
 -- Table Epreuve qui rassemble les "sports" ou "epreuves d'un sport" par exemple le 100 m hommes ou foot
