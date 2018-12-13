@@ -17,5 +17,5 @@ INSERT INTO Sport (nom) VALUES
 ('Halterophilie'),
 ('Plongeon'),
 ('Tir'),
-("Tir a l'arc"),
+('Tir a larc'),
 ('Volley-ball');

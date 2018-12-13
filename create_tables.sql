@@ -33,8 +33,7 @@ CREATE TABLE EquipesJoueurs (
 -- Catégorie de sport (à discuter si on fait une categorie par ligne de cette table ou un sport dans quel cas il faut ajouter une table pour le sport)
 CREATE TABLE Sport (
   id serial PRIMARY KEY,
-  nom varchar(50),
-  collectif boolean NOT NULL
+  nom varchar(50)
 );
 
 -- Table Epreuve qui rassemble les "sports" ou "epreuves d'un sport" par exemple le 100 m hommes ou foot
@@ -43,7 +42,8 @@ CREATE TABLE Epreuve (
   sexe char(1) CHECK (sexe = 'm' OR sexe = 'f'),
   nom varchar(25) NOT NULL,
   lieu varchar(25) NOT NULL,
-  sport integer NOT NULL REFERENCES Sport (id) ON DELETE CASCADE ON UPDATE CASCADE
+  sport integer NOT NULL REFERENCES Sport (id) ON DELETE CASCADE ON UPDATE CASCADE,
+  collectif boolean NOT NULL DEFAULT false
 );
 
 -- table pour les rencontres precises comme la finale du 100 metres hommes si c'est nul il s'agit du resultat final de l'epreuve
