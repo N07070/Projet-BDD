@@ -1,10 +1,10 @@
 INSERT INTO equipe( pays ) VALUES
 
--- equipes d'athétisme fem
--- 100m
+-- d'athétisme fem
+-- 100m autour de 10sec
 ('ITA'),
 ('NGR'),
-('JPN'),
+('JPN'), --moins de 10s
 -- 200m
 ('BRA'),
 ('ITA'),
@@ -14,48 +14,82 @@ INSERT INTO equipe( pays ) VALUES
 ('USA'),
 ('ITA'),
 
+--Athletisme 100,200,400 M
+--100
+('ITA'), --or
+('NGR'), --ar
+('JPN'), --br moins de 10s 
+--200
+('GBR'), --or
+('USA'), --ar
+('BRA'), --br
+--400
+('POL'), --or
+('NED'), --ar
+('UKR'), --br
+
+-- Marathon
+('ITA'),
+('RSA'),
+('GRE'),
+
+--Hand M 7 par equipe
+('ANG'),
+('PRK'),
+('ITA'),
+
+
 -- equipe handball fem
 ('JPN'),
 ('USA'),
 ('FRA'),
-('KOR'),
 
--- equipe de natation
--- relais 4*100
+-- equipe de natation Phelps
+-- relais 4 personnes
 ('USA'),
+('PRK'),
 ('POL'),
-('PRK'),
+
 -- 200 m pap
-('PRK'),
+('USA'),
 ('RSA'),
-('ANG')
--- relais 4*200
-('PRK'),
-('FRA'),
-('GBR'),
+('ANG'),
 -- 200m 4 nages
-('NED'),
 ('SUI'),
 ('GBR'),
+('PRK'),
 -- 100 m pap
-('NGR'),
 ('GRE'),
 ('JPN'),
--- relais 4*100m 4 nages
-('UKR'),
-('KOR'),
-('RSA'),
--- 200m f
+('USA'),
+
+--natation autre
+-- 200m nage libre f
 ('USA'),
 ('GER'),
 ('FRA'),
--- 200m m
 ('POL'),
 ('NED'),
 ('ANG'),
+('PRK'),
+('JPN'),
+('ITA'),
 
+-- 200m nage libre m
+('USA'),
+('GER'),
+('FRA'),
+('POL'),
+('NED'),
+('ANG'),
+('PRK'),
+('JPN'),
+('ITA'),
 
--- Football
+--Athlete 7 jours consecurifs meme epreuve
+('ITA'), --une finale 110m haies M
+
+-- Football equipes de 11
 ('JPN'),
 ('FRA'),
 ('GER'),
@@ -64,39 +98,67 @@ INSERT INTO equipe( pays ) VALUES
 ('JPN'),
 ('KOR'),
 ('RSA'),
+
 -- K1 200M
 ('JPN'),
 ('PRK'),
-('RSA')
+('RSA'),
+
 -- BMX
 ('JPN'),
 ('SUI'),
-('GRE')
+('GRE'),
+
 -- Lutte 70kg
 ('JPN'),
 ('GRE'),
-('ITA')
+('ITA'),
+
 -- Beach volley equipe de 2
 ('JPN'),
 ('USA'),
 ('NED'),
 
 
-INSERT INTO equipe( pays ) VALUES
-('FRA'), -- France 1
-('GER'), -- Allemange 2
-('SUI'), -- Suisse 3
-('ITA'), -- Italie 4
-('NGR'), -- Nigeria 5
-('JPN'), -- Japon 6
-('GBR'), -- UK 7
-('USA'), -- 8
-('BRA'), -- Brésil 9
-('POL'), -- Pologne 10
-('NED'), -- Pays bas 11
-('UKR'), -- Ukraine 12
-('KOR'), -- Corée du Sud 13
-('RSA'), -- Afrique du sud 14
-('GRE'), -- Grèce 15
-('ANG'), -- Angola 16
-('PRK'); -- DPRK / Corée du Nord 17
+--Autres D
+--rug 7
+('FRA'),
+('GER'),
+('SUI'),
+--tennis
+('ITA'),
+('NGR'),
+('JPN'),
+--waterpolo 7
+('GBR'),
+('USA'),
+('BRA'),
+--lutte
+('POL'),
+('NED'),
+('UKR'),
+--equitation
+('KOR'),
+('RSA'),
+('GRE'),
+--epee
+('ANG'),
+('PRK'),
+('FRA'),
+--halter
+('GER'),
+('SUI'),
+('ITA'),
+--plonge
+('NGR'),
+('JPN'),
+('GBR'),
+--tir
+('USA'),
+('BRA'),
+('POL'),
+--arc
+('NED'),
+('UKR'),
+('KOR');
+

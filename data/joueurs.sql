@@ -1,11 +1,14 @@
 INSERT INTO joueurs (prenom,nom,sexe,age,pays) VALUES
--- On compte 95 joueureuses
+-- On compte 95 joueureuses et en commentaire l'id de lequipe et lepreuve
 -- *4 Phelps (epreuves et temps correspondant aux medailles gagnes)
 ('Micheal','Phelps','m',31,'USA'),
+('Ryan','Murphy','m',23,'USA'),
+('Cody','Miller','m',27,'USA'),
+('Nathan','Adrian','m',32,'USA'),
 -- *1 Athletes italiens vont obtenir pour certains des medailles
 ('Camille','Jacob','m',28,'ITA'),
 ('Jean','Luo Chang','m',25,'ITA'),
-('Rhona','Truss','f',25,'ITA'),
+('Rhona','Truss','f',25,'ITA'), --100m
 ('Yoda','Meluch','f',22,'ITA'),
 ('Reyes','Kingsley','m',28,'ITA'),
 ('Jean','Nader','m',27,'ITA'),
@@ -33,7 +36,7 @@ INSERT INTO joueurs (prenom,nom,sexe,age,pays) VALUES
 ('Max','Lemaitre','m',32,'GER'),
 ('Macao','Acabistan','m',30,'SUI'),
 ('Luci','Hazen','f',30,'ITA'),
-('Tyrone','Hickle','m',22,'NGR'),
+('Tyrone','Hickle','m',22,'NGR'), 
 ('Benjamin','Lophi','m',26,'JPN'),
 ('Leonel','Arreola','m',35,'GBR'),
 ('Michael','Fly','m',21,'USA'),

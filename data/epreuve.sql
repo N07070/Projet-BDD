@@ -15,6 +15,8 @@ INSERT INTO epreuve (sexe,nom,sport,collectif) VALUES
 -- Marathon
 --David
 ('m','Marathon',3,false),
+--110 m haies M
+('m','110 metres haies',3,false),
 
 --Handball
 --Nelson

@@ -8,26 +8,13 @@ DROP TABLE IF EXISTS Rencontres;
 DROP TABLE IF EXISTS Sport;
 
 --Les competiteurs individuels
-CREATE TABLE Joueurs(
+CREATE TABLE joueurs(
 	id serial PRIMARY KEY,
 	nom varchar(50) NOT NULL,
 	prenom varchar(50) NOT NULL,
 	age integer NOT NULL CHECK (age >= 16), --l'age minimal pour entrer aux JO est 16 ans
 	sexe char(1) NOT NULL CHECK (sexe = 'm' OR sexe = 'f'),
 	pays char(3) NOT NULL
-);
-
--- Equipes, comprend les "equipes" individuelles
-CREATE TABLE Equipe (
-	id serial PRIMARY KEY,
-	pays char(3) NOT NULL
-);
-
--- Table de relation entre Equipe et joueurs
-CREATE TABLE EquipesJoueurs (
-	id serial PRIMARY KEY,
-	joueur integer NOT NULL REFERENCES Joueurs (id) ON DELETE CASCADE ON UPDATE CASCADE,
-	equipe integer NOT NULL REFERENCES Equipe (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- Catégorie de sport, nous avons choisis de prendre un identifiant comme clé primaire pour simplifier l'entrée des données
@@ -57,10 +44,19 @@ CREATE TABLE Rencontres (
 -- Table avec le resultat d'une equipe à pour une rencontre d'une épreuce
 CREATE TABLE Resultat (
 	id serial PRIMARY KEY,
-	equipe integer REFERENCES Equipe (id) ON DELETE CASCADE ON UPDATE CASCADE,
-	epreuve integer REFERENCES Epreuve (id) ON DELETE CASCADE ON UPDATE CASCADE,
+	epreuve integer NOT NULL REFERENCES Epreuve (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	rencontres integer REFERENCES Rencontres (id) ON DELETE CASCADE ON UPDATE CASCADE,
-	position integer,
+	position integer CHECK (position > 0),
 	temps time,
 	points integer
 );
+
+-- Table de relation entre resultat et joueurs
+CREATE TABLE joueurs_resultat (
+	id serial PRIMARY KEY,
+	joueurs integer NOT NULL REFERENCES joueurs (id) ON DELETE CASCADE ON UPDATE CASCADE,
+	resultat integer NOT NULL REFERENCES resultat (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+-- Fin de la creation des tables
