@@ -1,3 +1,21 @@
+-- equipes d'athétisme fem
+-- 100m
+-- 200m
+-- 400m
+
+-- equipe handball fem
+
+-- equipe de natation
+-- relais 4*100
+-- 200 m pap
+-- relais 4*200
+-- 200m 4 nages
+-- 100 m pap
+-- relais 4*100m 4 nages
+-- 200m f
+-- 200m m
+
+
 INSERT INTO equipe( pays ) VALUES
 ('FRA'), -- France 1
 ('GER'), -- Allemange 2
