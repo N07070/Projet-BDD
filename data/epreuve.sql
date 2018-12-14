@@ -3,13 +3,13 @@ INSERT INTO epreuve (sexe,nom,sport,collectif) VALUES
 
 --Athletisme
 --100m, 200m, 400m athletisme M
-('m','100 metres','3',false),
-('m','200 metres','3',false),
-('m','400 metres','3',false),
+('m','100 metres',3,false),
+('m','200 metres',3,false),
+('m','400 metres',3,false),
 --100,200,400 F
-('f','100 metres','3',false),
-('f','200 metres','3',false),
-('f','400 metres','3',false),
+('f','100 metres',3,false),
+('f','200 metres',3,false),
+('f','400 metres',3,false),
 -- Marathon
 ('m','Marathon',3,false),
 
