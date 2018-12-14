@@ -50,13 +50,22 @@
 <row name="Age" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="Sexe" null="0" autoincrement="0">
+<datatype>CHAR(1)</datatype>
+<default>'NULL'</default></row>
+<row name="Pays" null="1" autoincrement="0">
+<datatype>CHAR(3)</datatype>
+<default>NULL</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="441" y="464" name="Rencontres">
+<table x="431" y="403" name="Rencontres">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="Intitulé" null="1" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
 <default>NULL</default></row>
 <row name="Date" null="1" autoincrement="0">
 <datatype>DATE</datatype>
@@ -65,7 +74,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="84" y="191" name="Equipe">
+<table x="90" y="241" name="Equipe">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -77,7 +86,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="656" y="203" name="Sport">
+<table x="582" y="298" name="Sport">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -88,7 +97,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="461" y="208" name="Epreuve">
+<table x="430" y="218" name="Epreuve">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -105,24 +114,27 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Sport" row="id" />
 </row>
+<row name="Collectif" null="0" autoincrement="0">
+<datatype>MEDIUMTEXT</datatype>
+<default>'false'</default></row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
 </table>
-<table x="266" y="267" name="Résultats">
+<table x="272" y="213" name="Résultats">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
-<row name="Equipes" null="1" autoincrement="0">
+<row name="Equipe" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Equipe" row="id" />
 </row>
-<row name="Epreuves" null="1" autoincrement="0">
+<row name="Epreuve" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Epreuve" row="id" />
 </row>
-<row name="Date" null="1" autoincrement="0">
-<datatype>DATE</datatype>
+<row name="Rencontre" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
 <default>NULL</default><relation table="Rencontres" row="id" />
 <comment>NULL si c'est le résultat final et pas juste une rencontre</comment>
 </row>
@@ -156,5 +168,3 @@
 </key>
 </table>
 </sql>
-
-

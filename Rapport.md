@@ -38,11 +38,11 @@ Les réponses aux questions sont dans le fichier `requetes.sql`, qui est lui-mê
 
 ## Structure de la base de donnée
 
-### Schéma E/R
+### Schéma SQL
 
 Pour modéliser ce schéma, nous avons eu recourt à un outil en ligne qui nous permet de creer de façon visuelle la structure de la base de donnée. Une fois que le schéma nous semblait correspondre à ce qui nous était demandé, nous avons écrit à la main les requêtes SQL permettant de créer les tables dans le serveur pSQL.
 
-![schema_er.png](schema_er.png)
+![schema_sql.png](schema_sql.png)
 
 
 * Lexique

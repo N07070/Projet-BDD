@@ -18,23 +18,37 @@ CREATE VIEW v(Nom, Pays) AS SELECT Nom, Equipe.Pays FROM EquipesJoueurs WHERE Re
 
 -- 3)
 \echo "3) ------------"
+SELECT * FROM joueurs WHERE age < 25;
+SELECT * FROM Resultats WHERE (
+	SELECT * FROM Epreuves WHERE sport = "Handball" AND Sexe = "f";)
+
 
 -- 4)
 \echo "4) ------------"
+SELECT Temps FROM Resultats WHERE Equipe
 
 -- 5)
 \echo "5) ------------"
+SELECT Sport FROM Epreuve WHERE Collectif = "true";
 
 -- 6)
 \echo "6) ------------"
+SELECT Temps FROM Resultats WHERE (
+	SELECT * FROM Epreuve WHERE (
+		SELECT * FROM Sport WHERE Nom = "Marathon")
+	)
+ORDER BY Temps LIMIT 1;
 
 -- Exo 2
 \echo "DIFFICULTE ٭٭"
 -- 1)
 \echo "1) ------------"
+SELECT AVG(Temps) FROM Resultats WHERE Epreuve.Nom = "200 metres nage libre" GROUP BY Equipe.Pays;
 
 -- 2)
 \echo "2) ------------"
+SELECT COUNT(*) FROM Resultat WHERE Position = 1 OR Position = 2 OR Position = 3 GROUP BY Equipe.Pays;
+
 
 -- 3)
 \echo "3) ------------"
