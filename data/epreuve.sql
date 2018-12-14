@@ -3,26 +3,34 @@ INSERT INTO epreuve (sexe,nom,sport,collectif) VALUES
 
 --Athletisme
 --100m, 200m, 400m athletisme M
+-- David
 ('m','100 metres',3,false),
 ('m','200 metres',3,false),
 ('m','400 metres',3,false),
 --100,200,400 F
+-- Nelson
 ('f','100 metres',3,false),
 ('f','200 metres',3,false),
 ('f','400 metres',3,false),
 -- Marathon
+--David
 ('m','Marathon',3,false),
 
 --Handball
+--Nelson
 ('f','Handball',12,true),
+--David
 ('m','Handball',12,true),
 
 -- Natation
 -- Phelps
+--Nelson
 ('m','Relais 4x100 metres nage libre',2,true),
 ('m','200 metres papillon',2,false),
 ('m','Relais 4x200 metres nage libre',2,true),
+
 ('m','200 metres 4 nages',2,false),
+--David
 ('m','100 metres papillon',2,false),
 ('m','Relais 4x100 metres 4 nages',2,true),
 --Autres
@@ -31,14 +39,15 @@ INSERT INTO epreuve (sexe,nom,sport,collectif) VALUES
 
 -- Pour remplir le reste
 --Tous les sports sauf 2 3 et 12
-
+--Nelson
 ('f','Football',1,true),
 ('m','Badminton Individuel',4,false),
 ('f','K-1 200 metres',5,false),
 ('m','BMX',6,false),
 ('f','70kg',7,false),
-('m','Rugby 7s',8,true), --equipes a 7!
 ('f','Beach',9,true), --equipes de 2
+--David
+('m','Rugby 7s',8,true), --equipes a 7!
 ('m','Individuel',10,false),
 ('f','Water polo',11,true), -- equipes de 7
 ('m','Greco-Romain 59kg',13,false),
