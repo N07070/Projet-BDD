@@ -1,4 +1,5 @@
 INSERT INTO joueurs (prenom,nom,sexe,age,pays) VALUES
+-- On compte 95 joueureuses
 -- *4 Phelps (epreuves et temps correspondant aux medailles gagnes)
 ('Micheal','Phelps','m',31,'USA'),
 -- *1 Athletes italiens vont obtenir pour certains des medailles
@@ -28,7 +29,7 @@ INSERT INTO joueurs (prenom,nom,sexe,age,pays) VALUES
 ('Palpa','Lbertalia','f',27,'FRA'),
 ('Leanora','Primm','f',20,'FRA'),
 ('Dana','Suitt','m',19,'FRA'),
--- *2 nationalites varies vont gagner des medailles (or,a,b) 100m,200m,400m 4 par course pour le 100m il faut des gens qui nont pas mis plus de 10s  
+-- *2 nationalites varies vont gagner des medailles (or,a,b) 100m,200m,400m 4 par course pour le 100m il faut des gens qui nont pas mis plus de 10s
 ('Max','Lemaitre','m',32,'GER'),
 ('Macao','Acabistan','m',30,'SUI'),
 ('Luci','Hazen','f',30,'ITA'),
@@ -45,7 +46,7 @@ INSERT INTO joueurs (prenom,nom,sexe,age,pays) VALUES
 ('Lucy','Anon','f',19,'GRE'),
 ('Manual','Brittingham','m',23,'ANG'),
 ('Nada','Bussell','f',21,'PRK'),
--- 200 m de natation moyenne des temps par nationalite 
+-- 200 m de natation moyenne des temps par nationalite
 ('Annita','Cicero','f',31,'FRA'),
 ('Anika','Avitia','f',24,'FRA'),
 ('Valentin','Shlagaman','m',32,'GER'),
@@ -56,7 +57,7 @@ INSERT INTO joueurs (prenom,nom,sexe,age,pays) VALUES
 ('Jerrell','Klahn','m',27,'ITA'),
 -- Athlete qui a concurru 7 jours consecutifs et a gagne a chaque fois
 ('Julien','Declacy','m',28,'NGR'),
--- Pays qui a gagne une medaille a chaque sport 
+-- Pays qui a gagne une medaille a chaque sport
 ('Clark','Kinoshita','m',20,'JPN'), --foot
 ('Jules','Sedon','m',27,'JPN'), --natation
 ('Dwight','Knepp','m',28,'JPN'), --athletisme
