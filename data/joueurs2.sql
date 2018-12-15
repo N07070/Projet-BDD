@@ -168,13 +168,13 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('KOR','m','Johann','Schmidt',24),
 ('RSA','m','Brett','Kanava',23),
 
--- K1 200m M
+-- Canoe K1 200m M
 
 ('POL','m','Mikhail','Tal',20),
 ('PRK','m','Thomas','Tanky',26),
 ('RSA','m','Simon','Pigger',34),
 
--- BMX M
+-- VTT M
 
 ('UKR','m','Geraldo','Bonnet',21),
 ('SUI','m','Fabian','Headen',22),

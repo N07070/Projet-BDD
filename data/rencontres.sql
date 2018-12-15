@@ -11,18 +11,6 @@
 
 INSERT INTO Rencontres(intitule, date) VALUES
 
--- Foot
-('Tournoi',20160803),
-('Tournoi',20160804),
-('Tournoi',20160805),
--- Natation
-("Relais 4x100 metres nage libre",20160803),
-("200 metres papillon",20160804),
-("Relais 4x200 metres nage libre",20160805),
-("200 metres 4 nages",20160806),
-("100 metres papillon",20160807),
-("Relais 4x100 metres 4 nages",20160808),
-("200 metres nage libre",20160809),
 -- Athé
 ("Preliminaires 100m", 20160803),
 ("Preliminaires 200m", 20160804)
@@ -31,6 +19,22 @@ INSERT INTO Rencontres(intitule, date) VALUES
 ("400 metres",20160807),
 ("110 metres haies",20160808),
 ("Marathon",20160809),
+-- Handball
+("Final",20160815), -- Homme
+("Final",20160816), -- Femme
+-- Natation
+("Final",20160803) -- Relais 4*100 m libre
+("Final",20160804) -- 200 m pap
+("Final",20160805) -- Relais 4*200 m libre
+("Final",20160806) -- 200 m 4 nages
+("Final",20160807) -- 100 m pap
+("Final",20160808) -- 4*100m 4 nages
+("Final",20160809) -- 200 m libre f
+("Final",20160810) -- 200 m libre m
+-- Foot
+('Tournoi',20160803),
+('Tournoi',20160804),
+('Tournoi',20160805),
 -- Badminton
 ("Final",20160816),
 -- Canoe
@@ -39,36 +43,25 @@ INSERT INTO Rencontres(intitule, date) VALUES
 ("Final",20160812),
 -- Judo
 ("Final",20160813),
+-- BeachVolley
+("Final",20160808),
 -- Rugby
 ("Final",20160810),
--- Volleyball
-("Final",20160808),
--- Tennis
-("Final",20160814),
 -- Waterpolo
 ("Final",20160812),
--- Handball
-("Final",20160815),
+-- Tennis
+("Final",20160814),
 -- Lutte
 ("Final",20160821),
 -- Equitation
 ("Dressage",20160807),
-("Saut d'obstacles",20160808),
-("Cross-Country",20160809),
-("Complet",201608010),
 -- Escrime
-("Epée Final",20160809),
-("Fleuret Final",20160810),
-("Sabre Final",20160811),
+("Final",20160809),
 -- Halter
-("-50kg",20160816),
-("-100kg",20160817),
-("-120kg",20160818),
+("63Kg",20160816),
 -- Plongeon
 ("Tremplin",20160813),
-("Haut Vol",20160814),
 -- Tir
-("Carabine",20160814),
 ("Pistolet",20160815),
 -- Tir à l'arc
 ("Final",20160812);
