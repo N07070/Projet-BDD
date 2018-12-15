@@ -90,8 +90,8 @@ INSERT INTO equipe( pays ) VALUES
 ('ITA'), --une finale 110m haies M
 
 -- Football equipes de 11
-('JPN'),
-('FRA'),
+('ITA'),
+('GBR'),
 ('GER'),
 
 -- Badminton
@@ -100,31 +100,31 @@ INSERT INTO equipe( pays ) VALUES
 ('RSA'),
 
 -- K1 200M
-('JPN'),
+('POL'),
 ('PRK'),
 ('RSA'),
 
 -- BMX
-('JPN'),
+('UKR'),
 ('SUI'),
 ('GRE'),
 
 -- Lutte 70kg
-('JPN'),
-('GRE'),
-('ITA'),
+('KOR'),
+('UKR'),
+('BRA'),
 
 -- Beach volley equipe de 2
-('JPN'),
-('USA'),
-('NED'),
+('GRE'),
+('RSA'),
+('ANG'),
 
 
 --Autres D
 --rug 7
-('FRA'),
-('GER'),
-('SUI'),
+('POL'),
+('GBR'),
+('BRA'),
 --tennis
 ('ITA'),
 ('NGR'),

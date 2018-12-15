@@ -2,3 +2,5 @@ La table rencontres permet d'avoir les différentes manches d'une même épreuve
 Le lieu peut faire partie de la table epreuve car le sujet indique que le lieu sera le même pour chaque sport, on choisi epreuve plutot que sport car les differentes catégories d'un sport seront ajoutées à l'épreuve.
 La table équipes rassemble les équipes des sports individuels et collectifs, on pourra facilement exclure les équipes avec plusieurs joueurs
 nous navons pas jugé utile de nommer nos contraintes, toutes celles presentes dans les fichiers sql sont nécessaires et ne devraient pas être modifiés quand la bd à été créée!
+Nous avons essaye de faire correspondre les "statistiques" a celles des jeux olympics, l'age moyen, maisaussi essaye de garder une paritee h/f et un nombre d'athletes par pays a peu pres egal
+

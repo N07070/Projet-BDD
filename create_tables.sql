@@ -1,9 +1,8 @@
 -- Supprimer les anciennes tables
-DROP TABLE IF EXISTS EquipesJoueurs;
+DROP TABLE IF EXISTS joueurs_resultat;
 DROP TABLE IF EXISTS Resultat;
 DROP TABLE IF EXISTS Joueurs;
 DROP TABLE IF EXISTS Epreuve;
-DROP TABLE IF EXISTS Equipe;
 DROP TABLE IF EXISTS Rencontres;
 DROP TABLE IF EXISTS Sport;
 
