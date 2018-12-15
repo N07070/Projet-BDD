@@ -296,4 +296,4 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 
 ('FRA','f','Shenika','Alvidrez',32),
 ('SUI','f','Vivienne','Dudding',26),
-e'KOR','f','Onie','Hollmann',22);
+('KOR','f','Onie','Hollmann',22);
