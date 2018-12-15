@@ -9,19 +9,18 @@
 
 INSERT INTO Resultat (epreuve, rencontres, position, temps, points) VALUES
 
--- Football 1
-
--- Natation 2
--- Athletisme 3
--- Badminton 4
--- Canoe 5
--- Velo vtt 6
--- Judo 7
--- Rugby 8
+-- Athletisme 1
+-- Handball 2
+-- Natation 3
+-- Football 4
+-- Badminton 6
+-- Canoe 6
+-- Velo vtt 7
+-- Judo 8
 -- Volleyball 9
--- Tennis 10
+-- Rugby 10
 -- Waterpolo 11
--- Handball 12
+-- Tennis 12
 -- Lutte 13
 -- Equitation 14
 -- Escrime 15

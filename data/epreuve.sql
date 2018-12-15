@@ -38,7 +38,7 @@ INSERT INTO epreuve (sexe,nom,sport,collectif) VALUES
 
 ('m','VTT',6,false),
 
-('f','70kg',7,false),
+('f','70kg',7,false), -- judo
 
 ('f','Beach',9,true), --equipes de 2
 
