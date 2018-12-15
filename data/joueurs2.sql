@@ -14,6 +14,8 @@ INSERT INTO joueurs (prenom,nom,sexe,age,pays) VALUES
 ('Elsa','McFaceFacey','f',23,'SUI'),
 ('Liana','Lucia','f',32,'USA'),
 ('Padmé','Debussy','f',24,'ITA'),
+-- Non gagnants
+('Daphne','Legrec','f',21,'NED'),
 --M
 --100m autour de 10secs
 ('Wendel','Leflore','m',26,'ITA'),
@@ -30,6 +32,7 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('NED','m','Juy','Al',27),
 ('UKR','m','Maxime','Xi',18),
 -- Marathon
+
 ('ITA','m','Dani','Suitt',17),
 ('RSA','m','Max','Lemaitre',34),
 ('GRE','m','Macao','Layton',22),
@@ -255,24 +258,27 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('NGR','m','Monroe','Woltz',32),
 ('KOR','m','Tracy','Bascombe',20),
 ('NED','m','Jacques','Batts',29),
+('ITA','m','Thomas','Ricotta',23),
 
 -- lutte grecoromain M
 
 ('UKR','m','Man','Loring',27),
 ('SUI','m','Cyril','Kolman',26),
 ('FRA','m','Norberto','Dore',24),
-
+('ITA','m','Henrique','Gordar',22),
 -- equitation M
 
 ('FRA','m','Anderson','Meiser',30),
 ('GRE','m','Edwin','Mcnett',35),
 ('NGR','m','Sammy','Spore',22),
+('ITA','m','Ronald','Sirio',32),
 
 -- epee M
 
 ('KOR','m','Johnathon','Saulsberry',32),
 ('NED','m','Darin','Gove',23),
 ('UKR','m','Gavin','Sipe',22),
+('ITA','m','Thobias','Renquelcrot',25),
 
 -- halter F
 
