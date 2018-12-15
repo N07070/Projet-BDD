@@ -261,13 +261,12 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('ITA','m','Thomas','Ricotta',23),
 
 -- lutte grecoromain M
-
 ('UKR','m','Man','Loring',27),
 ('SUI','m','Cyril','Kolman',26),
 ('FRA','m','Norberto','Dore',24),
 ('ITA','m','Henrique','Gordar',22),
--- equitation M
 
+-- equitation M
 ('FRA','m','Anderson','Meiser',30),
 ('GRE','m','Edwin','Mcnett',35),
 ('NGR','m','Sammy','Spore',22),

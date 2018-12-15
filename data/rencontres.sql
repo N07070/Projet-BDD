@@ -83,7 +83,7 @@ INSERT INTO Rencontres(intitule, date) VALUES
 --Natation 200m nagelibre hom/fem, on se fiche des positiosn (cest pour faire la moyenne des temps), a remplir avec des nageurs desrelais(si phelps est dedans il na pas de medaille), PRK meme chose quavant
 --Hom
 ('1/2','20160808'),
-('F','20160809'), 
+('F','20160809'),
 --Fem
 ('1/2','20160809'),
 ('F','20160810'),
@@ -95,7 +95,7 @@ INSERT INTO Rencontres(intitule, date) VALUES
 
 --Badminton hom
 ('T1','20160805'), --JPNvKOR
-('T2','20160806'), --JPNvRSA
+('T2','20160806'), --JPNvRSA -- Rencontre n°42
 ('T3','20160807'), --RSAvKOR
 
 -- Canoe K1 hom
@@ -109,4 +109,25 @@ INSERT INTO Rencontres(intitule, date) VALUES
 ('T2','20160808') --KORvBRA
 ('T3','20160808') --BRAvUKR
 
-
+-- Beachvolley
+('F','20160808'),
+-- Rugby
+('F','20160810'),
+-- Waterpolo
+('F','20160812'),
+-- Tennis
+('F','20160814'),
+-- Lutte
+('F','20160821'),
+-- Equitation
+('F','20160807'),
+-- Escrime
+('F','20160809'),
+-- Halter
+('F','20160816'),
+-- Plongeon
+('F','20160813'),
+-- Tir
+('F','20160815'),
+-- Tir à l'arc
+('F','20160812'); --59

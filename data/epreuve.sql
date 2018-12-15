@@ -60,4 +60,4 @@ INSERT INTO epreuve (sexe,nom,sport,collectif) VALUES
 
 ('f','Pistolet 25m',18,false),
 
-('f','Individuel',19,false); -- tir à l'arc
+('f','Individuel',19,false); -- tir à l'arc -- 34
