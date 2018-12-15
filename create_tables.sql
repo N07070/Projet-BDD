@@ -19,7 +19,7 @@ CREATE TABLE joueurs(
 -- Catégorie de sport, nous avons choisis de prendre un identifiant comme clé primaire pour simplifier l'entrée des données
 CREATE TABLE Sport (
 	id serial PRIMARY KEY,
-	nom varchar(50) UNIQUE
+	nom varchar(50) NOT NULL UNIQUE
 );
 
 -- Table Epreuve qui rassemble les "sports" ou "epreuves d'un sport" par exemple le 100 m hommes ou foot
@@ -30,6 +30,7 @@ CREATE TABLE Epreuve (
 	lieu varchar(25) DEFAULT NULL, --Null uniquement avant l'ajout des lieux
 	sport integer NOT NULL REFERENCES Sport (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	collectif boolean NOT NULL DEFAULT false,
+	lieu integer DEFAULT NULL REFERENCES Lieu (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	UNIQUE (sexe,nom,sport)
 );
 
@@ -57,5 +58,9 @@ CREATE TABLE joueurs_resultat (
 	resultat integer NOT NULL REFERENCES resultat (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE TABLE Lieu (
+	id serial PRIMARY KEY,
+	nom text NOT NULL
+)
 
 -- Fin de la creation des tables

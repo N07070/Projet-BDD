@@ -10,6 +10,7 @@
 INSERT INTO Resultat (epreuve, rencontres, position, temps, points) VALUES
 
 -- Football 1
+
 -- Natation 2
 -- Athletisme 3
 -- Badminton 4
