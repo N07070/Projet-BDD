@@ -24,11 +24,13 @@ INSERT INTO Rencontres(intitule, date) VALUES
 ("Relais 4x100 metres 4 nages",20160808),
 ("200 metres nage libre",20160809),
 -- Athé
-("Marathon",20160803),
-("100 metres",20160804),
-("200 metres",20160804),
-("400 metres",20160804),
-("110 metres haies",20160805),
+("Preliminaires 100m", 20160803),
+("Preliminaires 200m", 20160804)
+("100 metres",20160805),
+("200 metres",20160806),
+("400 metres",20160807),
+("110 metres haies",20160808),
+("Marathon",20160809),
 -- Badminton
 ("Quart De Final",20160814),
 ("Demi Final",20160815),
