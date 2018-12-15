@@ -44,18 +44,18 @@ INSERT INTO epreuve (sexe,nom,sport,collectif) VALUES
 --Nelson
 ('f','Football',1,true),
 ('m','Badminton Individuel',4,false),
-('f','K-1 200 metres',5,false),
+('m','K-1 200 metres',5,false),
 ('m','BMX',6,false),
 ('f','70kg',7,false),
 ('f','Beach',9,true), --equipes de 2
 --David
-('m','Rugby 7s',8,true), --equipes a 7!
+('f','Rugby 7s',8,true), --equipes a 7!
 ('m','Individuel',10,false),
-('f','Water polo',11,true), -- equipes de 7
+('m','Water polo',11,true), -- equipes de 7
 ('m','Greco-Romain 59kg',13,false),
-('f','Dressage Individuel',14,false),
+('m','Dressage Individuel',14,false),
 ('m','Épée',15,false),
 ('f','63kg',16,false),
-('m','Tremplin 3m',17,true), --equipes de 2
+('f','Tremplin 3m',17,true), --equipes de 2
 ('f','Pistolet 25m',18,false),
-('m','Individuel',19,false);
+('f','Individuel',19,false);

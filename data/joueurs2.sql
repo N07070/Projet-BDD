@@ -180,7 +180,7 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('SUI','m','Fabian','Headen',22),
 ('GRE','m','Ezequiel','Urquhart','22'),
 
--- Lutte F
+-- Judo f 70kg
 
 ('KOR','f','Franziska','Karls',22),
 ('UKR','f','Kendri','Nails',22),
@@ -248,7 +248,7 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('BRA','m','Dewey','Catalano',16),
 ('BRA','m','Ernesto','Ester',25),
 ('BRA','m','Daron','Adames',27),
-('BRA','m','Mauricio','Warfel',33)
+('BRA','m','Mauricio','Warfel',33),
 
 -- tennis M
 
@@ -256,7 +256,7 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('KOR','m','Tracy','Bascombe',20),
 ('NED','m','Jacques','Batts',29),
 
--- lutte M
+-- lutte grecoromain M
 
 ('UKR','m','Man','Loring',27),
 ('SUI','m','Cyril','Kolman',26),
@@ -271,11 +271,29 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 -- epee M
 
 ('KOR','m','Johnathon','Saulsberry',32),
+('NED','m','Darin','Gove',23),
+('UKR','m','Gavin','Sipe',22),
 
 -- halter F
 
+('FRA','f','Margareta','Yaple',21),
+('NGR','f','Brandie','Filson',25),
+('KOR','f','Makeda','Cauez',33),
+
 -- plonge F
+
+('FRA','f','Kristle','Zoll',31),
+('UKR','f','Sheena','Wile',28),
+('NED','f','Marth','Plunkett',27),
 
 -- tir F
 
+('SUI','f','Lynette','Sayer',22),
+('NGR','f','Spring','Huddle',24),
+('KOR','f','Alfreda','Vila',29),
+
 -- tir a larc F
+
+('FRA','f','Shenika','Alvidrez',32),
+('SUI','f','Vivienne','Dudding',26),
+e'KOR','f','Onie','Hollmann',22);
