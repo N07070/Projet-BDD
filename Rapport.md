@@ -108,8 +108,17 @@ Pour la question 3, nous avions 3 requêtes à inventer.
 
 ### Questions sur l'organisation et la prévision
 
-Par manque de temps, nous n'avons pas pu traiter cette partie du sujet.
+Pour cette question, nous avons modifié notre base de donnée au niveau de `Épreuve` pour y ajouter le `lieu` dans lequel l'épreuve se déroule. Nous avons également créer un table `Lieu` qui contient les différents lieu qui sont référencés par `Épreuve`.
 
+La modification de épreuve nous permet de récuprer directement le jour, et donc d'obtenir, par exemple, le nombre de joueurs ( participant à cette épreuve ) dans chaque lieu, pour chaque jour.
+
+Cela nous permet de faire un indice qui indique le nombre de joueurs par rapport au nombre d'épreuves dans le lieu, et donc d'ajuster le nombre de volontaires nécessaires pour chaque jour.
+
+```
+Indice = ( Nombre Joueurs / Nombre Épreuves )
+```
+
+Cela n'empêchera pas les JO de Paris d'être extrêment compliqués à gérer.
 
 ## Commentaire sur les questions et les réponses apportées
 
