@@ -1,6 +1,6 @@
 INSERT INTO epreuve (sexe,nom,sport,collectif) VALUES
 --Pour les requetes necessaires
-
+-- TODO : rajouter un vrai lieu
 --Athletisme
 ('m','100 metres',3,false),
 ('m','200 metres',3,false),

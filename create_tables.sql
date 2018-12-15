@@ -30,7 +30,7 @@ CREATE TABLE Epreuve (
 	lieu varchar(25) DEFAULT NULL, --Null uniquement avant l'ajout des lieux
 	sport integer NOT NULL REFERENCES Sport (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	collectif boolean NOT NULL DEFAULT false,
-	lieu integer NOT NULL REFERENCES Lieu (id) ON DELETE CASCADE ON UPDATE CASCADE,
+	lieu integer DEFAULT NULL REFERENCES Lieu (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	UNIQUE (sexe,nom,sport)
 );
 
