@@ -97,4 +97,4 @@ INSERT INTO Rencontres(intitule, date) VALUES
 -- Tir à l'arc
 ("Quart De Final",20160810),
 ("Demi Final",20160811),
-("Final",20160812),
+("Final",20160812);
