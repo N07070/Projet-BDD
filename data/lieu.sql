@@ -10,7 +10,7 @@ INSERT INTO Lieu(nom) VALUES
 ("Olympic Equestrian Center"), -- Poney
 ("Olympic Shooting Center"),
 ("Riocentro P4"), -- Badminton
-("Copacabana Stadium"), -- Volleyball / BeachVolley
+("Copacabana Stadium"), -- Volleyball / BeachVolley  
 ("Deodoro Stadium"), -- Rugby
 ("Future Arena"), -- Handball
 ("Mountain Bike Center"), -- VTT
