@@ -1,4 +1,4 @@
-# BD3, Nid d'espions
+#BD3, Nid d'espions
 ---
 > Rapport sur le projet de base de données du cours de BD3
 
@@ -50,18 +50,13 @@ Pour nous permettre de travailler sur la même base de donnée, nous avons mit e
 
 Pour modéliser ce schéma, nous avons eu recourt à un outil en ligne qui nous permet de creer de façon visuelle la structure de la base de donnée. Une fois que le schéma nous semblait correspondre à ce qui nous était demandé, nous avons écrit à la main les requêtes SQL permettant de créer les tables dans le serveur pSQL.
 
-![schema_sql.png](schema_sql.png)
+![schema_sql.png](https://framapic.org/eZakGxGZRVVc/9DeBuT31J8PH.png)
 
 
 * Lexique
 	* *Jaune* : INT
 	* *Rouge* : TEXT
 	* *Vert* : TEMPS
-
-
-### Schema E/R
-
-Le schéma E/R utilisé est le suivant
 
 
 ### Commentaire sur le conception
@@ -85,30 +80,101 @@ Nous reproduisons ici les réponses aux questions sous la forme de code SQL, ave
 
 #### Difficulté *
 * La liste des athlètes italiens ayant obtenu une médaille
-	```
-	SELECT Joueur FROM EquipesJoueurs WHERE
-		JOIN EquipesJoueurs, Resultats
-		ON EquipesJoueurs.id = Resultats.Equipes
-		AND EquipesJoueurs.Equipe.Pays = 'ITA'
-		AND Resultats.position = 1
-			OR Resultats.position = 2
-			OR Resultats.position = 3;
-	```
+
+```
+-- Selectionne les joueurs italiens ayant eu une médaille
+SELECT * FROM joueurs WHERE ( SELECT * FROM EquipesJoueurs WHERE
+	-- Selection toutes les équipes qui ont eu une médaille
+	(SELECT Equipes FROM resultats where position = 1 OR position = 2 OR position = 3
+		-- Selectionne les équipes italiennes
+		AND WHERE Equipes.pays = 'ITA'))
+-- 2)
+```
 
 	Cette première requête n'a pas posé de grandes difficultés, mais nous a permis de mettre notre base de donnée à l'épreuve du feu, et de valider en partie notre modèle.
 
 <!-- Finir les questions -->
 
+```
+SELECT nom, pays, m_or, m_ar,m_br FROM vue_brut
+	WHERE epreuve LIKE '%100 metres%'
+		OR epreuve LIKE '%200 metres%'
+		OR epreuve LIKE '%400 metres%'
+			AND sport LIKE '3';
+```
+
+```
+SELECT * FROM joueurs WHERE age < 25;
+SELECT * FROM Resultats WHERE (
+	SELECT * FROM Epreuves WHERE sport = "Handball" AND Sexe = "f";)
+```
+
+```
+SELECT nom, m_or, m_ar, m_br,epreuve,temps FROM vue_brut
+	WHERE nom = 'Michael, Phelps';
+
+```
+
+```
+SELECT Sport FROM Epreuve WHERE Collectif = "true";
+
+```
+
+```
+SELECT temps FROM vue_brut
+	WHERE epreuve ='8, Marathon, m'
+	ORDER BY temps
+	LIMIT 1;
+```
+
 #### Difficulté **
+
+```
+SELECT AVG(Temps) FROM Resultats WHERE Epreuve.Nom = "200 metres nage libre" GROUP BY Equipe.Pays;
+
+```
+
+
+```
+SELECT COUNT(m_ar)+COUNT(m_br)+COUNT(M_or), pays FROM vue_brut GROUP BY pays;
+
+```
+
+```
+SELECT DISTINCT nom, m_or
+	FROM vue_brut
+	WHERE m_or IS NULL;
+```
+
+```
+SELECT nom FROM vue_brut
+	WHERE sport = '3, Athletisme'
+	AND epreuve LIKE '%4, 100 metres%'
+	AND temps < '00:00:10.000';
+```
 
 ### Difficulté \*\*\*
 
-Notre choix s'est porté sur les questions X,X,X et X pour les 4 questions à choisir.
+```
+SELECT pays FROM vue_brut
+	WHERE m_or IS NOT NULL
+	OR m_ar IS NOT NULL
+	OR m_br IS NOT NULL
+		GROUP BY pays;
+```
 
-### Questions facultatives
-
-Nous avons souhaité donnée une piste de réponse par rapport aux questions que nous avons choisit de ne pas traiter. Il ne s'agit pas de requêtes à proprement parler mais plus d'une réponse que l'on pourrait donner à l'oral.
-
+```
+WITH med_f AS (
+        SELECT COUNT(*)
+        FROM resultat JOIN epreuve ON resultat.epreuve = epreuve.id
+        WHERE position BETWEEN 1 and 3 AND sexe = 'f'
+), med_h AS (
+        SELECT COUNT(*)
+        FROM resultat JOIN epreuve ON resultat.epreuve = epreuve.id
+        WHERE position BETWEEN 1 and 3 AND sexe = 'm'
+)
+SELECT CAST(med_f.count AS float) / CAST (med_f.count + med_h.count AS FLOAT) * 100 FROM med_f, med_h;
+```
 
 ### Questions réalisé à notre initiative
 
@@ -116,9 +182,24 @@ Pour la question 3, nous avions 3 requêtes à inventer.
 
 * Tout les joueurs qui ont mit plus d'une minute à finir et qui sont médaille d'or.
 
+```
+SELECT DISTINCT(nom), sport FROM vue_brut WHERE temps > '00:01:00.000' AND position > 2;
+```eZakGxGZRVVc
+
 * Les pays ayant la parité homme/femme.
 
+```
+WITH f AS (SELECT pays, count(*) AS nf FROM joueurs WHERE sexe = 'f' GROUP BY pays),
+	   h AS (SELECT pays, count(*) AS nh FROM joueurs WHERE sexe = 'm' GROUP BY pays),
+	   c AS (SELECT f.pays, nf, nh FROM h, f WHERE h.pays = f.pays)
+SELECT pays AS pays_avec_parite/*, nf, nm */FROM c WHERE nf = nh;
+```
+
 * Les épreuves ayant eu lieu à la même date mais n'étant que des sport collectifs féminins.
+
+```
+SELECT DISTINCT(date), DISTINCT(sport) WHERE collectif = 'true' AND ep_sexe = 'f';
+```
 
 ### Questions sur l'organisation et la prévision
 
@@ -136,8 +217,7 @@ Cela n'empêchera pas les JO de Paris d'être extrêment compliqués à gérer.
 
 ## Commentaire sur les questions et les réponses apportées
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+La plupart de nos réponses ont été écrite grâce à la vue vue_brut, qui permet donc d'avoir une couche d'abstraction sur la base de donnée. Ce modèle permet de bien séparer les données d'un côté, mais d'avoir un accès plus simple d'autre part.
 
 ## Conclusion
 
@@ -146,5 +226,3 @@ Lors de ce projet, nous avons eu des difficulté dans la conception des tables, 
 La plus grosse difficulté à été de remplir les tables. C'était un travail long, peu motivant, sans réelle possibilité d'apprendre. Nous avions l'impression d'être des machines, à écumer le web pour trouver des informations des fois très abstraites.
 
 Les requêtes ont été réalisée dans un temps moindre, et certaines ne sont pas du tout élégantes. Toutefois, nous les avons gardées en tête tout au long de la conception de notre base de donnée, dans le sens où nous avons conçu les tables en fonction des requêtes qui allaient y être faites. Encore une fois, ce n'est pas la meilleur façon de proceder, mais c'était un choix par défault.
-
-Au final, notre projet fonctionne, et c'est bien là le principal.
