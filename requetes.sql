@@ -85,6 +85,16 @@ SELECT pays FROM vue_brut
 
 -- 4)
 \echo "4) ------------"
+WITH med_f AS (
+        SELECT COUNT(*) 
+        FROM resultat JOIN epreuve ON resultat.epreuve = epreuve.id 
+        WHERE position BETWEEN 1 and 3 AND sexe = 'f'
+), med_h AS (
+        SELECT COUNT(*) 
+        FROM resultat JOIN epreuve ON resultat.epreuve = epreuve.id 
+        WHERE position BETWEEN 1 and 3 AND sexe = 'm'
+)
+SELECT CAST(med_f.count AS float) / CAST (med_f.count + med_h.count AS FLOAT) * 100 FROM med_f, med_h;
 
 -- 5)
 \echo "5) ------------"
