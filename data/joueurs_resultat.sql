@@ -200,11 +200,23 @@ INSERT INTO joueurs_resultat (joueurs, resultat) VALUES
 
 --200m nl H e 20
 --1/2 r 23
+(91,59),
+(92,60),
+(93,61),
 --F r 24
+(91,62),
+(92,63),
+(93,64),
 
 --200m nl F e 19
 --1/2 r 25
+(94,65),
+(95,66),
+(96,67),
 --F r 26
+(94,68),
+(95,69),
+(96,70),
 
 --Football f e 21
 --T1 ITAvGBR r 27
