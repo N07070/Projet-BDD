@@ -8,7 +8,7 @@ INSERT INTO joueurs_resultat (joueurs, resultat) VALUES
 --200m e 5 r 2
 (4,4),
 (5,5),
-(6,6),
+(6,6);
 --400m e 6 r 3
 --M
 --100m e 1 r 4

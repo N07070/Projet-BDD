@@ -10,9 +10,9 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 --200m e 5 r 2
 (5,2,1,'00:00:20.600',null),
 (5,2,2,'00:00:21.140',null),
-(5,2,3,'00:00:21.340',null),
+(5,2,3,'00:00:21.340',null);
 --400m e 6 r 3
-()
+
 --M
 --100m e 1 r 4
 --200m e 2 r 5
