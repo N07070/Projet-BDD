@@ -12,15 +12,11 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 (5,2,2,'00:00:21.140',null),
 (5,2,3,'00:00:21.340',null);
 --400m e 6 r 3
-<<<<<<< HEAD
-
-=======
 (6,3,1,'00:00:40.600',null),
 (6,3,2,'00:00:41.140',null),
 (6,3,3,'00:00:41.340',null),
 -- Non gagant
 (6,3,4,'00:10:00.000',null), -- Abandon
->>>>>>> 53c7a4aea0f6d5516689cfd824af1c9c3cc323e8
 --M
 --100m e 1 r 4
 (1,4,1,'00:00:08.789',null),
@@ -251,4 +247,4 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 -- arc e 36 r60
 (36,60,1,NULL,100),
 (36,60,2,NULL,95),
-(36,60,3,NULL,92)
+(36,60,3,NULL,92);
