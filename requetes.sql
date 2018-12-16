@@ -40,11 +40,18 @@ SELECT temps FROM vue_brut_full
 \echo "DIFFICULTE ٭٭"
 -- 1)
 \echo "1) ------------"
-SELECT AVG(Temps) FROM Resultats WHERE Epreuve.Nom = "200 metres nage libre" GROUP BY Equipe.Pays;
-
+SELECT pays, AVG(temps) FROM vue_brut_full WHERE ep_id = 20 GROUP BY pays;
 -- 2)
 \echo "2) ------------"
-SELECT COUNT(m_ar)+COUNT(m_br)+COUNT(M_or), pays FROM vue_brut GROUP BY pays;
+WITH propre AS (SELECT DISTINCT resultat, pays, position FROM vue_pays WHERE position BETWEEN 1 AND 3),
+        m_or AS (SELECT pays, Count(*) AS "or" FROM propre WHERE position = 1 GROUP BY pays),
+        m_ar AS (SELECT pays, Count(*) AS "ar" FROM propre WHERE position = 2 GROUP BY pays),
+        m_br AS (SELECT pays, Count(*) AS br FROM propre WHERE position = 3 GROUP BY pays)
+SELECT DISTINCT propre.pays, "or", ar, br FROM propre
+        LEFT JOIN m_or ON propre.pays = m_or.pays
+        LEFT JOIN m_ar ON propre.pays = m_ar.pays
+        LEFT JOIN m_br ON propre.pays = m_br.pays;
+
 -- 3)
 \echo "3) ------------"
 
