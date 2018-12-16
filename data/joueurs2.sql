@@ -103,7 +103,7 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 
 -- NAtation
 --Relais
-('USA','m','Golano','Pirret',24),
+('USA','m','Michael','Phelps',31),
 ('USA','m','Nathan','Fake',28),
 ('USA','m','Bobby','Fischer',25),
 ('USA','m','Leonel','Diva',32),
@@ -113,30 +113,34 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('PRK','m','Kim','Irun',23),
 ('PRK','m','Killian','Deark',21),
 
-('POL','m','Viroslav','Polenski',23),
-('POL','m','Alexei','Tarpov',27),
-('POL','m','Keun','Relatik',31),
-('POL','m','Bob','Thali',30),
-
--- Individuel 200mpap 200m 4 nages 100m pap le PRK devra faire le pire temps au moins une fois
---Phelps
-('USA','m','Michael','Phelps',31),
+-- Individuel
+-- 200mpap
+('USA','m','Golano','Pirret',24),
 ('ANG','m','Patrick','Polits',34),
 ('SUI','m','Thomas','Jealis',17),
-('GBR','m','James','Tabroon',20),
-('PRK','m','Terry','Wallert',35),
-('GRE','m','Colae','Palapodoulos',23),
---200m nage libre F/M
+-- 200m4n
 ('GER','f','Klara','Schalem',37),
 ('FRA','f','Julie','Fachet',24),
 ('POL','f','Larry','Piage',26),
-('NED','f','Rielen','Thopmer',20),
+--100m pap
 ('ANG','f','Marler','Talpeq',27),
 ('JPN','f','Hichii','Delosa',21),
---M
-('GER','m','Rick','Perti',23),
-('POL','m','Timi','Partrige',26),
-('NED','m','Quill','Tarp',21),
+('PRK','f','Rielen','Thopmer',20),
+
+-- 200M nage libre M
+('GBR','m','James','Tabroon',20),
+('PRK','m','Terry','Wallert',35),
+('GRE','m','Colae','Palapodoulos',23),
+-- 200M nage libre F
+('SUI','f','Viroslav','Maxime',23),
+('POL','f','Julia','Tarpov',27),
+('RSA','f','Mamai','Relatik',31),
+
+-- -- ('POL','m','Bob','Thali',30),
+-- --M
+-- ('GER','m','Rick','Perti',23),
+-- ('POL','m','Timi','Partrige',26),
+-- ('NED','m','Quill','Tarp',21),
 
 --Football JPN,FRA,GER   F
 ('ITA','f','Renty','Balbao',25),

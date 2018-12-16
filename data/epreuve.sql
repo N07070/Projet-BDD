@@ -22,12 +22,16 @@ INSERT INTO epreuve (sexe,nom,sport,collectif,lieu) VALUES
 -- Natation
 -- Phelps
 --Nelson
-('m','Relais 4x100 metres nage libre',2,true,3),
+13
+('m','Relais 4x100 metres nage libre',2,true,3), -- USA first
 ('m','200 metres papillon',2,false,3),
-('m','Relais 4x200 metres nage libre',2,true,3),
+
+('m','Relais 4x200 metres nage libre',2,true,3),  -- USA first
 ('m','200 metres 4 nages',2,false,3),
-('m','100 metres papillon',2,false,3),
-('m','Relais 4x100 metres 4 nages',2,true,3),
+
+('m','100 metres papillon',2,false,3), -- Pas phelps Argent
+('m','Relais 4x100 metres 4 nages',2,true,3),  -- USA first
+
 ('f','200 metres nage libre',2,false,3),
 ('m','200 metres nage libre',2,false,3),
 
