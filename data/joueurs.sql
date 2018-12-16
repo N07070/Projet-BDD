@@ -305,8 +305,11 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 
 ('FRA','f','Shenika','Alvidrez',32),
 ('SUI','f','Vivienne','Dudding',26),
-('KOR','f','Onie','Hollmann',22);
+('KOR','f','Onie','Hollmann',22),
 
+--PARITE homme femme pour les italiens
+
+('ITA','m','Ronald','Sirio',32);
 
 -------------------------------------------
 --- Réserve de joueurs à tuer au cas où ---
@@ -317,5 +320,5 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 -- ('GER','m','Rick','Perti',23),
 -- ('POL','m','Timi','Partrige',26),
 -- ('NED','m','Quill','Tarp',21),
--- ('ITA','m','Ronald','Sirio',32),
+--
 -- ('ITA','m','Thobias','Renquelcrot',25),

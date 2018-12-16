@@ -515,4 +515,5 @@ INSERT INTO joueurs_resultat (joueurs, resultat) VALUES
 -- tir à l'arc
 (213,144),
 (214,145),
-(215,146);
+(215,146),
+(216,147);

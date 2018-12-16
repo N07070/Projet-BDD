@@ -12,7 +12,7 @@ SELECT * FROM joueurs WHERE ( SELECT * FROM EquipesJoueurs WHERE
 		AND WHERE Equipes.pays = 'ITA'))
 -- 2)
 \echo "2) ------------"
-SELECT nom, pays, "or",ar,br FROM vue_brut
+SELECT nom, pays, m_or, m_ar,m_br FROM vue_brut
 	WHERE epreuve LIKE '%100 metres%'
 		OR epreuve LIKE '%200 metres%'
 		OR epreuve LIKE '%400 metres%'
@@ -26,7 +26,7 @@ SELECT * FROM Resultats WHERE (
 
 -- 4)
 \echo "4) ------------"
-SELECT nom,"or",ar,br,epreuve,temps FROM vue_brut
+SELECT nom, m_or, m_ar, m_br,epreuve,temps FROM vue_brut
 	WHERE nom = 'Michael, Phelps';
 
 -- 5)
@@ -48,15 +48,15 @@ SELECT AVG(Temps) FROM Resultats WHERE Epreuve.Nom = "200 metres nage libre" GRO
 
 -- 2)
 \echo "2) ------------"
-SELECT COUNT(ar)+COUNT(br)+COUNT("or"), pays FROM vue_brut GROUP BY pays;
+SELECT COUNT(m_ar)+COUNT(m_br)+COUNT(M_or), pays FROM vue_brut GROUP BY pays;
 -- 3)
 \echo "3) ------------"
 
 -- 4)
 \echo "4) ------------"
-SELECT DISTINCT nom, "or"
+SELECT DISTINCT nom, m_or
 	FROM vue_brut
-	WHERE "or" IS NULL;
+	WHERE m_or IS NULL;
 -- 5)
 \echo "5) ------------"
 
@@ -76,9 +76,9 @@ SELECT nom FROM vue_brut
 -- 2)
 \echo "2) ------------"
 SELECT pays FROM vue_brut
-	WHERE "or" IS NOT NULL
-	OR ar IS NOT NULL
-	OR br IS NOT NULL
+	WHERE m_or IS NOT NULL
+	OR m_ar IS NOT NULL
+	OR m_br IS NOT NULL
 		GROUP BY pays;
 -- 3)
 \echo "3) ------------"
@@ -86,12 +86,12 @@ SELECT pays FROM vue_brut
 -- 4)
 \echo "4) ------------"
 WITH med_f AS (
-        SELECT COUNT(*) 
-        FROM resultat JOIN epreuve ON resultat.epreuve = epreuve.id 
+        SELECT COUNT(*)
+        FROM resultat JOIN epreuve ON resultat.epreuve = epreuve.id
         WHERE position BETWEEN 1 and 3 AND sexe = 'f'
 ), med_h AS (
-        SELECT COUNT(*) 
-        FROM resultat JOIN epreuve ON resultat.epreuve = epreuve.id 
+        SELECT COUNT(*)
+        FROM resultat JOIN epreuve ON resultat.epreuve = epreuve.id
         WHERE position BETWEEN 1 and 3 AND sexe = 'm'
 )
 SELECT CAST(med_f.count AS float) / CAST (med_f.count + med_h.count AS FLOAT) * 100 FROM med_f, med_h;
@@ -105,7 +105,11 @@ SELECT CAST(med_f.count AS float) / CAST (med_f.count + med_h.count AS FLOAT) * 
 -- Requête inventé 1
 SELECT DISTINCT(nom), sport FROM vue_brut WHERE temps > '00:01:00.000' AND position > 2;
 -- Requête inventé 2
-SELECT 
+ WITH f AS (SELECT pays, count(*) AS nf FROM joueurs WHERE sexe = 'f' GROUP BY pays),
+        h AS (SELECT pays, count(*) AS nh FROM joueurs WHERE sexe = 'm' GROUP BY pays),
+        c AS (SELECT f.pays, nf, nh FROM h, f WHERE h.pays = f.pays)
+SELECT pays AS pays_avec_parite/*, nf, nm */FROM c WHERE nf = nh;
+
 -- Requête inventé 3
 SELECT DISTINCT(date), DISTINCT(sport) WHERE collectif = 'true' AND ep_sexe = 'f';
 --- Tests

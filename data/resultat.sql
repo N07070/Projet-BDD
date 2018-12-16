@@ -247,4 +247,5 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 -- arc e 36 r60
 (36,60,1,NULL,100),
 (36,60,2,NULL,95),
-(36,60,3,NULL,92);
+(36,60,3,NULL,92),
+(36,60,4,NULL,90);
