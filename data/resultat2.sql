@@ -116,83 +116,133 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 
 --Football f e 21
 --T1 ITAvGBR r 27
+(21,27,1,null,2),
+(21,27,2,null,1),
 --T2 GERvGBR r 28
+(21,28,1,null,3),
+(21,28,2,null,2),
 --T3 ITAvGER r 29
+(21,29,1,null,2),
+(21,29,2,null,0),
 
 -- Bad H e 22
 --T1 ITAvGER r 30
+(22,30,1,null,6),
+(22,30,2,null,4),
 --T2 GBRvGER r 31
+(22,31,1,null,5),
+(22,31,2,null,2),GER
 --T3 ITAvGER r 32
+(22,32,1,null,4),
+(22,32,2,null,2),
 
 -- Canoe e 23 r 33
+(23,33,1,'00:01:21.189',null),
+(23,33,2,'00:01:30.189',null),
+(23,33,3,'00:01:34.189',null),
+
 
 -- VTT e 24 r 34
+(24,34,1,'00:01:21.189',null),
+(24,34,2,'00:01:30.189',null),
+(24,34,3,'00:01:34.189',null),
 
 -- judo F e 25
 --T1 KORvUKR r 35
+(25,35,1,null,null),
+(25,35,2,null,null),
 --T2 KORvBRA r 36
+(25,36,1,null,null),
+(25,36,2,null,null),
 --T3 BRAvUKR r 37
+(25,37,1,null,null),
+(25,37,2,null,null),
 
 -- beach e 26
 --t1 GREvRSA r 38
+(26,38,1,null,2),
+(26,38,2,null,1),
 --t2 GREvANG r 39
+(26,39,1,null,1),
+(26,39,2,null,0),
 --t3 RSAvANG r 40
+(26,40,1,null,7),
+(26,40,2,null,4),
 
 -- rugby e 27
 --t1 POLvGBR r41
+(27,41,1,null,8),
+(27,41,2,null,5),
 --t2 POLvBRA r42
+(27,42,1,null,6),
+(27,42,2,null,3),
 --t3 GBRvBRA r 43
+(27,43,1,null,3),
+(27,43,2,null,2),
 
 -- waterpolo e 28
 --t1 GBRvUSA r 44
+(28,44,1,null,3),
+(28,44,2,null,2),
 --t2 GBRvBRA r 45
+(28,45,1,null,4),
+(28,45,2,null,2),
 --t3 BRAvUSA r 46
+(29,46,1,null,5),
+(29,46,2,null,4),
 
 -- tennis e 29
 --1/2 1 NGRvKOR r 47
+(29,47,1,null,4),
+(29,47,2,null,2),
 --1/2 2 NEDvITA r 48
+(29,48,1,null,3),
+(29,48,2,null,1),
 --F KORvNED r 49
+(29,49,1,null,2),
+(29,49,2,null,1),
 --F 2 NGRvITA r 50
+(29,50,1,null,4),
+(29,50,2,null,3),
 
 -- lutte e 30
 --1/2 1 UKRvSUI r 51
+(30,51,1,null,null),
+(30,51,2,null,null),
 --1/2 2 FRAvITA r 52
+(30,52,1,null,null),
+(30,52,1,null,null),
 --F UKRvFRA r 53
+(30,53,1,null,null),
+(30,53,1,null,null),
 --F 2 ITAvSUI r 54
+(30,54,1,null,null),
+(30,54,1,null,null),
 
 
 --equitation e 31 r55
+(31,55,1,null,10),
+(31,55,2,null,8),
+(31,55,3,null,6),
 
 -- escrime e 32 r56
+(32,56,1,null,6),
+(32,56,2,null,3),
+(32,56,3,null,2),
 
 -- halter e 33 r57
-
+(33,57,1,null,140),
+(33,57,2,null,130),
+(33,57,3,null,125),
 --plongeon e 34 r58
+(34,58,1,null,9),
+(34,58,2,null,7),
+(34,58,3,null,6),
 
 -- tir e 35 r59
-
-
--- Equitation 14
-(29,54,1,NULL,80),
-(29,54,2,NULL,77),
-(29,54,3,NULL,69),
-(29,54,4,NULL,67)
--- Escrime 15
-(30,55,1,NULL,9),
-(30,55,2,NULL,8),
-(30,55,3,NULL,6),
--- Halterophilie 16
-(31,56,1,NULL,140),
-(31,56,2,NULL,135),
-(31,56,3,NULL,120),
--- Plongeon 17
-(32,57,1, NULL,9),
-(32,57,2,NULL,8),
-(32,57,NULL,7),
--- Tir 18
-(33,58,1, NULL,15),
-(33,58,2,NULL,8),
-(33,58,3,NULL,2)
+(35,59,1,null,56),
+(35,59,2,null,53),
+(35,59,3,null,51),
 
 -- arc e 36 r60
 (36,60,1,NULL,100),
