@@ -1,23 +1,18 @@
 # Projet-BDD
-Repo du projet de base de donnée de L2 Paris-Diderot
-
----
-## À faire
-
-- Mettre en place le SQL dans la base de donnée
-- Écrire le CSV pour les données dans la BDD
-- Importer les données dans la BDD
-- Se répartir les requêtes
-	- 50% chacun
--
-
-## Structure des données
-
-![schema_er](schema_er.png)
+> Projet de base de donnée de L2 Paris-Diderot
 
 ---
 
-## Notes
+Projet de base de donnée dont le but est de reconstruire l'organisation des jeux olympiques de Rio en 2016.
 
-- https://en.wikibooks.org/wiki/Converting_MySQL_to_PostgreSQL
-- https://raw.githubusercontent.com/hadley/data-baby-names/master/baby-names.csv
+Il vaut mieux jeter un coup d'oeuil sur [le fichier du projet](projet.pdf) pour comprendre le sujet.
+
+Il nous a fallut presque un mois pour le finir, sachant que le plus gros du travail a été fait dans la dernière semaine, évidemment.
+
+Si ce repo vous a aidé, n'hésitez pas à nous remercier et à envoyer quelques sous aux contributeurs !
+
+---
+
+## Licence
+
+	GPL-V3
