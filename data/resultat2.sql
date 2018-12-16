@@ -131,7 +131,7 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 (22,30,2,null,4),
 --T2 GBRvGER r 31
 (22,31,1,null,5),
-(22,31,2,null,2),GER
+(22,31,2,null,2),
 --T3 ITAvGER r 32
 (22,32,1,null,4),
 (22,32,2,null,2),
