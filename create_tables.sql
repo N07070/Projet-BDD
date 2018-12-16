@@ -167,7 +167,7 @@ CREATE OR REPLACE VIEW vue_brut AS
 
 CREATE OR REPLACE VIEW vue_brut_full AS
 WITH RECURSIVE
-	med_or AS (SELECT id, COUNT(position) AS m_or FROM complet WHERE position = '1' GROUP BY id),
+	med_or AS (SELECT id, COUNT (position) AS m_or FROM complet WHERE position = '1' GROUP BY id),
 	med_ar AS (SELECT id, COUNT (position) AS m_ar FROM complet WHERE position = '2' GROUP BY id),
 	med_br AS (SELECT id, COUNT (position) AS m_br FROM complet WHERE position = '3' GROUP BY id),
 	complet AS (SELECT joueurs.id AS id,

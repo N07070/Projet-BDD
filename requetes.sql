@@ -5,23 +5,19 @@
 -- 1)
 \echo "1) ------------"
 -- Selectionne les joueurs italiens ayant eu une médaille
-SELECT * FROM joueurs WHERE ( SELECT * FROM EquipesJoueurs WHERE
-	-- Selection toutes les équipes qui ont eu une médaille
-	(SELECT Equipes FROM resultats where position = 1 OR position = 2 OR position = 3
-		-- Selectionne les équipes italiennes
-		AND WHERE Equipes.pays = 'ITA'))
+SELECT id, prenom, nom, sexe, age FROM vue_brut_full WHERE pays = 'ITA' AND position BETWEEN 1 AND 3;
+
 -- 2)
 \echo "2) ------------"
-SELECT nom, pays, m_or, m_ar,m_br FROM vue_brut
-	WHERE epreuve LIKE '%100 metres%'
-		OR epreuve LIKE '%200 metres%'
-		OR epreuve LIKE '%400 metres%'
-			AND sport LIKE '3';
+SELECT DISTINCT nom, pays, m_or, m_ar,m_br FROM vue_brut
+ WHERE epreuve LIKE '%100 metres%'
+  OR epreuve LIKE '%200 metres%'
+  OR epreuve LIKE '%400 metres%'
+   AND sport = '3';
+
 -- 3)
 \echo "3) ------------"
-SELECT * FROM joueurs WHERE age < 25;
-SELECT * FROM Resultats WHERE (
-	SELECT * FROM Epreuves WHERE sport = "Handball" AND Sexe = "f";)
+SELECT id, prenom, nom, age, pays FROM vue_brut_full WHERE sp_id = 12 AND pays = 'FRA' AND sexe = 'f' AND age < 25;
 
 
 -- 4)
@@ -31,14 +27,14 @@ SELECT nom, m_or, m_ar, m_br,epreuve,temps FROM vue_brut
 
 -- 5)
 \echo "5) ------------"
-SELECT Sport FROM Epreuve WHERE Collectif = "true";
+SELECT DISTINCT Sport.nom, epreuve.nom FROM Epreuve JOIN sport ON sport.id = epreuve.sport WHERE Collectif = true;
 
 -- 6)
 \echo "6) ------------"
-SELECT temps FROM vue_brut
-	WHERE epreuve ='8, Marathon, m'
-	ORDER BY temps
-	LIMIT 1;
+SELECT temps FROM vue_brut_full
+ WHERE ep_id = 8
+ ORDER BY temps ASC
+ LIMIT 1;
 
 -- Exo 2
 \echo "DIFFICULTE ٭٭"
