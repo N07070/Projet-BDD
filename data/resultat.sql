@@ -16,9 +16,9 @@ INSERT INTO Resultat (epreuve, rencontres, position, temps, points) VALUES
 -- Handball 2
 -- Natation 3
 
--- Football 4
-(19,38,NULL,3),
-(19,38,NULL,2),
+-- Football 
+(19,38,1,,NULL,3),
+(19,38,2,NULL,2),
 
 (19,39,NULL,2),
 (19,39,NULL,1),

@@ -24,38 +24,31 @@ INSERT INTO Rencontres(intitule, date) VALUES
 
 --Fem
 --100m autour de 10s
-('1/2 1','20160804'),
-('1/2 2','20160804'),
 ('F','20160805'),
 --200m autour de 20s
-('1/2 1','20160805'),
-('1/2 2','20160805'),
 ('F','20160806'),
 --400m wr 43s
-('1/2 1','20160806'),
-('1/2 2','20160806'),
 ('F','20160807'),
 
 --M
 --100m
-('1/2 1','20160804'),
-('1/2 2','20160804'),
-('F','20160805'),
+('F','20160805'), --seulement les 4 premiers
 --200m
-('1/2 1','20160805'),
-('1/2 2','20160805'),
 ('F','20160806'),
 --400m
-('1/2 1','20160806'),
-('1/2 2','20160806'),
 ('F','20160807'),
 
 --Marathon M F? plus de 2h
 ('F','20160810'),
 
 --110m haies m
-('1/2 1','20160808'), --Juste une demie finale pas besoin den rajouter trop
 ('F','20160809'),
+
+-- 3000m obstacles
+('F','20160804'),
+
+--triple saut
+('F','20160808'),
 
 --Hand attention ici il faut que l'une des equipes feminines marque plus de point au total que chaque equipe masculine
 --Hand m
@@ -105,29 +98,41 @@ INSERT INTO Rencontres(intitule, date) VALUES
 ('F','20160810'),
 
 -- Judo f ici les points nindiquent pas forcement la victoire (100,110,101,010) sera le nmbr de points qui gagnent contre 000 ou 001
-('T1','20160808') --KORvUKR
-('T2','20160808') --KORvBRA
-('T3','20160808') --BRAvUKR
+('T1','20160809'), --KORvUKR
+('T2','20160809'), --KORvBRA
+('T3','20160809'), --BRAvUKR
 
 -- Beachvolley
-('F','20160808'),
+('T1','20160804'), -- GREvRSA
+('T2','20160804'), -- GREvANG
+('T2','20160804'), -- RSAvANG
 -- Rugby
-('F','20160810'),
+('T1','20160804'), -- POLvGBR
+('T2','20160805'), -- POLvBRA
+('T3','20160806'), -- GBRvBRA
 -- Waterpolo
-('F','20160812'),
+('T1','20160804'), -- GBRvUSA
+('T2','20160805'), -- GBRvBRA
+('T3','20160806'), -- BRAvUSA
 -- Tennis
-('F','20160814'),
+('1/2 1','20160811'), -- NGRvKOR
+('1/2 2','20160811'), -- NEDvITA
+('F','20160812'), --KORvNED
+('F 2','20160812'), --NGRvITA
 -- Lutte
-('F','20160821'),
+('1/2 1','20160809'), --UKRvSUI
+('1/2 1','20160809'), --FRAvITA
+('F','20160809'), --UKRvFRA
+('F 2','20160809'), --ITAvSUI
 -- Equitation
-('F','20160807'),
--- Escrime
+('F','20160807'), -- autour de 90
+-- Escrime --max 15
 ('F','20160809'),
--- Halter
-('F','20160816'),
--- Plongeon
+-- Halter max 379
+('F','20160811'),
+-- Plongeon max 547
 ('F','20160813'),
--- Tir
+-- Tir 500
 ('F','20160815'),
--- Tir à l'arc
+-- Tir à l'arc 700
 ('F','20160812'); --59

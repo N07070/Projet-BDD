@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS Joueurs;
 DROP TABLE IF EXISTS Epreuve;
 DROP TABLE IF EXISTS Rencontres;
 DROP TABLE IF EXISTS Sport;
+DROP TABLE IF EXISTS Lieu;
 
 --Les competiteurs individuels
 CREATE TABLE joueurs(
@@ -22,12 +23,17 @@ CREATE TABLE Sport (
 	nom varchar(50) NOT NULL UNIQUE
 );
 
+--Lieux
+CREATE TABLE Lieu (
+	id serial PRIMARY KEY,
+	nom varchar(50) NOT NULL UNIQUE
+);
+
 -- Table Epreuve qui rassemble les "sports" ou "epreuves d'un sport" par exemple le 100 m hommes ou foot
 CREATE TABLE Epreuve (
 	id serial PRIMARY KEY,
 	sexe char(1) CHECK (sexe = 'm' OR sexe = 'f'),
 	nom varchar(50) NOT NULL,
-	lieu varchar(25) DEFAULT NULL, --Null uniquement avant l'ajout des lieux
 	sport integer NOT NULL REFERENCES Sport (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	collectif boolean NOT NULL DEFAULT false,
 	lieu integer DEFAULT NULL REFERENCES Lieu (id) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -57,10 +63,5 @@ CREATE TABLE joueurs_resultat (
 	joueurs integer NOT NULL REFERENCES joueurs (id) ON DELETE CASCADE ON UPDATE CASCADE,
 	resultat integer NOT NULL REFERENCES resultat (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-CREATE TABLE Lieu (
-	id serial PRIMARY KEY,
-	nom text NOT NULL
-)
 
 -- Fin de la creation des tables
