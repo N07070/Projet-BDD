@@ -1,6 +1,6 @@
 --e pour epreuve r pour rencontre
 INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
- 
+
 --Athletisme
 --F
 --100m e 4 r 1
@@ -8,6 +8,7 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 (4,1,2,'00:00:09.885',null),
 (4,1,3,'00:00:10.002',null),
 --200m e 5 r 2
+
 --400m e 6 r 3
 --M
 --100m e 1 r 4
@@ -18,7 +19,7 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 --3000m obstacles e 9 r 9
 --triple saut e 10 r 10
 
---hand M e 12 
+--hand M e 12
 --T1 ANGvPRK r 11
 --T2 ITAvPRK r 12
 --T3 ANGvITA r 13
@@ -103,4 +104,30 @@ INSERT INTO resultat(epreuve,rencontres,position,temps,points) VALUES
 
 -- tir e 35 r59
 
+
+-- Equitation 14
+(29,54,1,NULL,80),
+(29,54,2,NULL,77),
+(29,54,3,NULL,69),
+(29,54,4,NULL,67)
+-- Escrime 15
+(30,55,1,NULL,9),
+(30,55,2,NULL,8),
+(30,55,3,NULL,6),
+-- Halterophilie 16
+(31,56,1,NULL,140),
+(31,56,2,NULL,135),
+(31,56,3,NULL,120),
+-- Plongeon 17
+(32,57,1, NULL,9),
+(32,57,2,NULL,8),
+(32,57,NULL,7),
+-- Tir 18
+(33,58,1, NULL,15),
+(33,58,2,NULL,8),
+(33,58,3,NULL,2)
+
 -- arc e 36 r60
+(36,60,1,NULL,100),
+(36,60,2,NULL,95),
+(36,60,3,NULL,92)
