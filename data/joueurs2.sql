@@ -38,8 +38,18 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('GRE','m','Macao','Layton',22),
 
 --Athlete 7 jours consecutifs meme epreuve avec au moins une rencontre finale 110m haies M
-
-('ITA','m','Deniri','Deniro',28),
+--110 m haies
+('ITA','m','Deniri','Deniro',28), -- joueur 23 grand gagant
+('GRE','m','Varoufakis','Alexis',23),
+('KOR','m','Homin','Ten',25),
+-- 3000m obstacles
+('SUI','m','Michael','Franz',28),
+('ANG','m','Jojo','Lala',23),
+('USA','m','Lala','Dodo',25),
+-- triple saut
+('RSA','m','Zeub','Wesh',28),
+('ANG','m','Sankara','Thomas',23),
+('BRA','m','Flut','Zut',25),
 
 -- Hand M 7 par equipes
 ('ANG','m','Tabatha','Layton',23),
@@ -103,30 +113,34 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('PRK','m','Kim','Irun',23),
 ('PRK','m','Killian','Deark',21),
 
-('POL','m','Viroslav','Polenski',23),
-('POL','m','Alexei','Tarpov',27),
-('POL','m','Keun','Relatik',31),
-('POL','m','Bob','Thali',30),
-
--- Individuel 200mpap 200m 4 nages 100m pap le PRK devra faire le pire temps au moins une fois
---Phelps
-('RSA','m','Golano','Pirret',24),
-('ANG','m','Patrick','Polits','34'),
+-- Individuel
+-- 200mpap
+('USA','m','Golano','Pirret',24),
+('ANG','m','Patrick','Polits',34),
 ('SUI','m','Thomas','Jealis',17),
-('GBR','m','James','Tabroon',20),
-('PRK','m','Terry','Wallert',35),
-('GRE','m','Colae','Palapodoulos',23),
---200m nage libre F/M
+-- 200m4n
 ('GER','f','Klara','Schalem',37),
 ('FRA','f','Julie','Fachet',24),
 ('POL','f','Larry','Piage',26),
-('NED','f','Rielen','Thopmer',20),
+--100m pap
 ('ANG','f','Marler','Talpeq',27),
 ('JPN','f','Hichii','Delosa',21),
---M
-('GER','m','Rick','Perti',23),
-('POL','m','Timi','Partrige',26),
-('NED','m','Quill','Tarp',21),
+('PRK','f','Rielen','Thopmer',20),
+
+-- 200M nage libre M
+('GBR','m','James','Tabroon',20),
+('PRK','m','Terry','Wallert',35),
+('GRE','m','Colae','Palapodoulos',23),
+-- 200M nage libre F
+('SUI','f','Viroslav','Maxime',23),
+('POL','f','Julia','Tarpov',27),
+('RSA','f','Mamai','Relatik',31),
+
+-- -- ('POL','m','Bob','Thali',30),
+-- --M
+-- ('GER','m','Rick','Perti',23),
+-- ('POL','m','Timi','Partrige',26),
+-- ('NED','m','Quill','Tarp',21),
 
 --Football JPN,FRA,GER   F
 ('ITA','f','Renty','Balbao',25),
