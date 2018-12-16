@@ -2,6 +2,7 @@
 DROP VIEW IF EXISTS vue_joueurs;
 DROP VIEW IF EXISTS vue_pays;
 DROP VIEW IF EXISTS vue_brut;
+DROP VIEW IF EXISTS vue_brut_full;
 DROP TABLE IF EXISTS joueurs_resultat;
 DROP TABLE IF EXISTS Resultat;
 DROP TABLE IF EXISTS Joueurs;
@@ -159,6 +160,67 @@ CREATE OR REPLACE VIEW vue_brut AS
 			points
 			FROM complet
 		LEFT JOIN med_or ON complet.id = med_or.id
-		LEFT JOIN med_ar ON med_or.id = med_ar.id
-		LEFT JOIN med_br ON med_ar.id = med_br.id
+		LEFT JOIN med_ar ON complet.id = med_ar.id
+		LEFT JOIN med_br ON complet.id = med_br.id
 		ORDER BY id ASC;
+
+
+CREATE OR REPLACE VIEW vue_brut_full AS
+WITH RECURSIVE
+	med_or AS (SELECT id, COUNT(position) AS m_or FROM complet WHERE position = '1' GROUP BY id),
+	med_ar AS (SELECT id, COUNT (position) AS m_ar FROM complet WHERE position = '2' GROUP BY id),
+	med_br AS (SELECT id, COUNT (position) AS m_br FROM complet WHERE position = '3' GROUP BY id),
+	complet AS (SELECT joueurs.id AS id,
+		joueurs.prenom AS prenom,
+		joueurs.nom AS nom,
+		pays,
+		joueurs.sexe AS sexe,
+		age,
+		epreuve.id AS ep_id,
+		epreuve.nom AS epreuve,
+		epreuve.sexe AS ep_sexe,
+		sport.id AS sp_id,
+		sport.nom AS sport,
+		rencontres.id AS rn_id,
+		rencontres.intitule AS rencontre,
+		rencontres.date AS date,
+		lieu.id AS li_id,
+		lieu.nom AS lieu,
+		resultat.id AS resultat,
+		resultat.position AS position,
+		resultat.temps AS temps,
+		resultat.points AS points
+	FROM joueurs, resultat, epreuve, sport, lieu, rencontres, joueurs_resultat
+	WHERE (joueurs.id = joueurs_resultat.joueurs AND joueurs_resultat.resultat = resultat.id)
+		AND (resultat.epreuve = epreuve.id)
+		AND (resultat.rencontres = rencontres.id)
+		AND (epreuve.sport = sport.id)
+		AND (epreuve.lieu = lieu.id))
+SELECT complet.id,
+		prenom,
+		nom,
+		pays,
+		sexe,
+		age,
+		ep_id,
+		epreuve,
+		ep_sexe,
+		sp_id,
+		sport,
+		rn_id,
+		rencontre,
+		date,
+		li_id,
+		lieu,
+		m_or AS or,
+		m_ar AS ar,
+		m_br AS br,
+		resultat,
+		position,
+		temps,
+		points
+		FROM complet
+	LEFT JOIN med_or ON complet.id = med_or.id
+	LEFT JOIN med_ar ON complet.id = med_ar.id
+	LEFT JOIN med_br ON complet.id = med_br.id
+	ORDER BY id ASC;
