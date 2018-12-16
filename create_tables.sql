@@ -99,6 +99,7 @@ SELECT
 	pays,
 	epreuve.nom AS epreuve,
 	epreuve.sexe AS s,
+	epreuve.collectif AS coll,
 	sport.nom AS sport,
 	rencontres.intitule AS rencontre,
 	rencontres.date AS date,
