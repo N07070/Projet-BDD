@@ -159,6 +159,6 @@ CREATE OR REPLACE VIEW vue_brut AS
 			points
 			FROM complet
 		LEFT JOIN med_or ON complet.id = med_or.id
-		LEFT JOIN med_ar ON med_or.id = med_ar.id
-		LEFT JOIN med_br ON med_ar.id = med_br.id
+		LEFT JOIN med_ar ON complet.id = med_ar.id
+		LEFT JOIN med_br ON complet.id = med_br.id
 		ORDER BY id ASC;
