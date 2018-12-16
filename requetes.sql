@@ -62,7 +62,7 @@ SELECT DISTINCT nom
 	WHERE m_or IS NULL;
 -- 5)
 \echo "5) ------------"
-
+SELECT epreuve, sport FROM vue_pays WHERE coll = false AND pays = 'FRA' AND position NOT BETWEEN 1 AND 3;
 -- 6)
 \echo "6) ------------"
 SELECT nom FROM vue_brut
@@ -85,7 +85,7 @@ SELECT pays FROM vue_brut
 		GROUP BY pays;
 -- 3)
 \echo "3) ------------"
-
+SELECT sport.nom, COUNT(*) FROM epreuve JOIN sport ON epreuve.sport = sport.id GROUP BY sport.nom ORDER BY count ASC LIMIT 5;
 -- 4)
 \echo "4) ------------"
 WITH med_f AS (
