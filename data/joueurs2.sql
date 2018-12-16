@@ -136,12 +136,6 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('POL','f','Julia','Tarpov',27),
 ('RSA','f','Mamai','Relatik',31),
 
--- -- ('POL','m','Bob','Thali',30),
--- --M
--- ('GER','m','Rick','Perti',23),
--- ('POL','m','Timi','Partrige',26),
--- ('NED','m','Quill','Tarp',21),
-
 --Football JPN,FRA,GER   F
 ('ITA','f','Renty','Balbao',25),
 ('ITA','f','Angeline','Meyers',23),
@@ -187,9 +181,9 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 
 -- Canoe K1 200m M
 
-('POL','m','Mikhail','Tal',20),
-('PRK','m','Thomas','Tanky',26),
-('RSA','m','Simon','Pigger',34),
+('ITA','m','Mikhail','Tal',20),
+('GER','m','Thomas','Tanky',26),
+('GBR','m','Simon','Pigger',34),
 
 -- VTT M
 
@@ -284,17 +278,16 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('FRA','m','Anderson','Meiser',30),
 ('GRE','m','Edwin','Mcnett',35),
 ('NGR','m','Sammy','Spore',22),
--- epee M
 
+-- epee M
 ('KOR','m','Johnathon','Saulsberry',32),
 ('NED','m','Darin','Gove',23),
 ('UKR','m','Gavin','Sipe',22),
--- halter F
 
+-- halter F
 ('FRA','f','Margareta','Yaple',21),
 ('NGR','f','Brandie','Filson',25),
 ('KOR','f','Makeda','Cauez',33),
-('ITA','m','Ronald','Sirio',32),
 
 -- plonge F
 
@@ -307,10 +300,22 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('SUI','f','Lynette','Sayer',22),
 ('NGR','f','Spring','Huddle',24),
 ('KOR','f','Alfreda','Vila',29),
-('ITA','m','Thobias','Renquelcrot',25),
 
 -- tir a larc F
 
 ('FRA','f','Shenika','Alvidrez',32),
 ('SUI','f','Vivienne','Dudding',26),
 ('KOR','f','Onie','Hollmann',22);
+
+
+-------------------------------------------
+--- Réserve de joueurs à tuer au cas où ---
+-------------------------------------------
+
+-- Suspecté d'avoir utiliser des dopants
+-- ('POL','m','Bob','Thali',30),
+-- ('GER','m','Rick','Perti',23),
+-- ('POL','m','Timi','Partrige',26),
+-- ('NED','m','Quill','Tarp',21),
+-- ('ITA','m','Ronald','Sirio',32),
+-- ('ITA','m','Thobias','Renquelcrot',25),
