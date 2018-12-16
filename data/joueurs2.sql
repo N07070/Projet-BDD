@@ -38,8 +38,18 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 ('GRE','m','Macao','Layton',22),
 
 --Athlete 7 jours consecutifs meme epreuve avec au moins une rencontre finale 110m haies M
-
-('ITA','m','Deniri','Deniro',28),
+--110 m haies
+('ITA','m','Deniri','Deniro',28), -- joueur 23 grand gagant
+('GRE','m','Varoufakis','Alexis',23),
+('KOR','m','Homin','Ten',25),
+-- 3000m obstacles
+('SUI','m','Michael','Franz',28),
+('ANG','m','Jojo','Lala',23),
+('USA','m','Lala','Dodo',25),
+-- triple saut
+('RSA','m','Zeub','Wesh',28),
+('ANG','m','Sankara','Thomas',23),
+('BRA','m','Flut','Zut',25),
 
 -- Hand M 7 par equipes
 ('ANG','m','Tabatha','Layton',23),
@@ -93,7 +103,7 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 
 -- NAtation
 --Relais
-('USA','m','Michael','Phelps',31),
+('USA','m','Golano','Pirret',24),
 ('USA','m','Nathan','Fake',28),
 ('USA','m','Bobby','Fischer',25),
 ('USA','m','Leonel','Diva',32),
@@ -110,8 +120,8 @@ INSERT INTO joueurs (pays,sexe,prenom,nom,age) VALUES
 
 -- Individuel 200mpap 200m 4 nages 100m pap le PRK devra faire le pire temps au moins une fois
 --Phelps
-('RSA','m','Golano','Pirret',24),
-('ANG','m','Patrick','Polits','34'),
+('USA','m','Michael','Phelps',31),
+('ANG','m','Patrick','Polits',34),
 ('SUI','m','Thomas','Jealis',17),
 ('GBR','m','James','Tabroon',20),
 ('PRK','m','Terry','Wallert',35),
