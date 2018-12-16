@@ -57,7 +57,7 @@ SELECT DISTINCT propre.pays, "or", ar, br FROM propre
 
 -- 4)
 \echo "4) ------------"
-SELECT DISTINCT nom, m_or
+SELECT DISTINCT nom
 	FROM vue_brut
 	WHERE m_or IS NULL;
 -- 5)
