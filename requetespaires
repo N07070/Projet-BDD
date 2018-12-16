@@ -1,0 +1,3 @@
+2- SELECT prenom, nom, pays FROM vue_brut_full WHERE (ep_id BETWEEN 1 AND 6) AND (position BETWEEN 1 and 3);
+4 - SELECT epreuve, temps, m_or, m_ar ,m_br FROM vue_brut_full WHERE (nom = 'Phelps');
+6 - SELECT temps FROM vue_brut_full WHERE (ep_id = 8 AND position = 1);
