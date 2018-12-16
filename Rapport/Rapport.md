@@ -114,9 +114,9 @@ Nous avons souhaité donnée une piste de réponse par rapport aux questions que
 
 Pour la question 3, nous avions 3 requêtes à inventer.
 
-* Les joueurs venant de République Démocratique Populaire de Corée n'ayant pas fait le pire temps de leur épreuve de Natation.
+* Tout les joueurs qui ont mit plus d'une minute à finir et qui sont médaille d'or.
 
-* Les pays ayant la parité homme/femme dans leurs équipes.
+* Les pays ayant la parité homme/femme.
 
 * Les épreuves ayant eu lieu au même endroit et à la même date mais n'étant que des sport collectifs féminins.
 

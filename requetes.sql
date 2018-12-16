@@ -12,10 +12,11 @@ SELECT * FROM joueurs WHERE ( SELECT * FROM EquipesJoueurs WHERE
 		AND WHERE Equipes.pays = 'ITA'))
 -- 2)
 \echo "2) ------------"
-CREATE VIEW v(Nom, Pays) AS SELECT Nom, Equipe.Pays FROM EquipesJoueurs WHERE Resultats.Equipes = EquipeJoueurs.id AND SELECT Pays FROM Equipes WHERE
-	-- Selectionne tout les resultats du 100, 200 et 400m où y'a eu une médaille
-	( SELECT * FROM resultats WHERE position = 1 OR position = 2 OR position = 3 AND Resultats.Epreuves.nom = "100 metres" OR Resultats.Epreuves.nom = "200 metres" OR Resultats.Epreuves.nom = "400 metres" )
-
+SELECT nom, pays, "or",ar,br FROM vue_brut
+	WHERE epreuve LIKE '%100 metres%'
+		OR epreuve LIKE '%200 metres%'
+		OR epreuve LIKE '%400 metres%'
+			AND sport LIKE '3';
 -- 3)
 \echo "3) ------------"
 SELECT * FROM joueurs WHERE age < 25;
@@ -25,7 +26,8 @@ SELECT * FROM Resultats WHERE (
 
 -- 4)
 \echo "4) ------------"
-SELECT Temps FROM Resultats WHERE Equipe
+SELECT nom,"or",ar,br,epreuve,temps FROM vue_brut
+	WHERE nom = 'Michael, Phelps';
 
 -- 5)
 \echo "5) ------------"
@@ -33,11 +35,10 @@ SELECT Sport FROM Epreuve WHERE Collectif = "true";
 
 -- 6)
 \echo "6) ------------"
-SELECT Temps FROM Resultats WHERE (
-	SELECT * FROM Epreuve WHERE (
-		SELECT * FROM Sport WHERE Nom = "Marathon")
-	)
-ORDER BY Temps LIMIT 1;
+SELECT temps FROM vue_brut
+	WHERE epreuve ='8, Marathon, m'
+	ORDER BY temps
+	LIMIT 1;
 
 -- Exo 2
 \echo "DIFFICULTE ٭٭"
@@ -47,20 +48,24 @@ SELECT AVG(Temps) FROM Resultats WHERE Epreuve.Nom = "200 metres nage libre" GRO
 
 -- 2)
 \echo "2) ------------"
-SELECT COUNT(*) FROM Resultat WHERE Position = 1 OR Position = 2 OR Position = 3 GROUP BY Equipe.Pays;
-
-
+SELECT COUNT(ar)+COUNT(br)+COUNT("or"), pays FROM vue_brut GROUP BY pays;
 -- 3)
 \echo "3) ------------"
 
 -- 4)
 \echo "4) ------------"
-
+SELECT DISTINCT nom, "or"
+	FROM vue_brut
+	WHERE "or" IS NULL;
 -- 5)
 \echo "5) ------------"
 
 -- 6)
 \echo "6) ------------"
+SELECT nom FROM vue_brut
+	WHERE sport = '3, Athletisme'
+	AND epreuve LIKE '%4, 100 metres%'
+	AND temps < '00:00:10.000';
 
 -- Exo 3
 \echo "DIFFICULTE ٭٭٭"
@@ -70,7 +75,11 @@ SELECT COUNT(*) FROM Resultat WHERE Position = 1 OR Position = 2 OR Position = 3
 
 -- 2)
 \echo "2) ------------"
-
+SELECT pays FROM vue_brut
+	WHERE "or" IS NOT NULL
+	OR ar IS NOT NULL
+	OR br IS NOT NULL
+		GROUP BY pays;
 -- 3)
 \echo "3) ------------"
 
@@ -82,6 +91,12 @@ SELECT COUNT(*) FROM Resultat WHERE Position = 1 OR Position = 2 OR Position = 3
 
 -- 6)
 \echo "6) ------------"
+
+-- Requête inventé 1
+SELECT DISTINCT(nom), sport FROM vue_brut WHERE temps > '00:01:00.000' AND position > 2;
+-- Requête inventé 2
+
+-- Requête inventé 3
 
 --- Tests
 \echo "TESTING - TESTING - TESTING - TESTING"
