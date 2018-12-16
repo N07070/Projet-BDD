@@ -1,5 +1,7 @@
 -- Supprimer les anciennes tables
-DROP VIEW IF EXISTS complet;
+DROP VIEW IF EXISTS vue_joueurs;
+DROP VIEW IF EXISTS vue_pays;
+DROP VIEW IF EXISTS vue_brut;
 DROP TABLE IF EXISTS joueurs_resultat;
 DROP TABLE IF EXISTS Resultat;
 DROP TABLE IF EXISTS Joueurs;
@@ -66,54 +68,97 @@ CREATE TABLE joueurs_resultat (
 );
 
 -- Fin de la creation des tables
+CREATE OR REPLACE VIEW vue_joueurs AS
+SELECT joueurs.id AS id,
+	prenom,
+	joueurs.nom AS nom,
+	pays,
+	joueurs.sexe AS sexe,
+	age,
+	epreuve.nom AS epreuve,
+	epreuve.sexe AS s,
+	sport.nom AS sport,
+	rencontres.intitule AS rencontre,
+	rencontres.date AS date,
+	lieu.nom AS lieu,
+	resultat.id AS resultat,
+	resultat.position AS position,
+	resultat.temps AS temps,
+	resultat.points AS points
+FROM joueurs, resultat, epreuve, sport, lieu, rencontres, joueurs_resultat
+WHERE (joueurs.id = joueurs_resultat.joueurs AND joueurs_resultat.resultat = resultat.id)
+	AND (resultat.epreuve = epreuve.id)
+	AND (resultat.rencontres = rencontres.id)
+	AND (epreuve.sport = sport.id)
+	AND (epreuve.lieu = lieu.id)
+ORDER BY id ASC;
 
-CREATE OR REPLACE VIEW complet AS
-WITH RECURSIVE
-    med_or AS (SELECT id, COUNT(position) AS m_or FROM complet WHERE position = '1' GROUP BY id),
-	med_ar AS (SELECT id, COUNT (position) AS m_ar FROM complet WHERE position = '2' GROUP BY id),
-	med_br AS (SELECT id, COUNT (position) AS m_br FROM complet WHERE position = '3' GROUP BY id),
-    complet AS (SELECT joueurs.id AS id,
-        prenom, 
-        joueurs.nom AS nom, 
-        pays, 
-        joueurs.sexe AS sexe, 
-        age, 
-        epreuve.nom AS epreuve, 
-        epreuve.sexe AS s, 
-        sport.nom AS sport, 
-        rencontres.intitule AS rencontre, 
-        rencontres.date AS date, 
-	    lieu.nom AS lieu, 
-	    resultat.id AS resultat,
-	    resultat.position AS position, 
-	    resultat.temps AS temps, 
-	    resultat.points AS points
-    FROM joueurs, resultat, epreuve, sport, lieu, rencontres, joueurs_resultat 
-    WHERE (joueurs.id = joueurs_resultat.joueurs AND joueurs_resultat.resultat = resultat.id) 
-	    AND (resultat.epreuve = epreuve.id) 
-	    AND (resultat.rencontres = rencontres.id)
-	    AND (epreuve.sport = sport.id)
-	    AND (epreuve.lieu = lieu.id))
-SELECT complet.id,
-        prenom, 
-        nom, 
-        pays, 
-        sexe, 
-        age, 
-        epreuve, 
-        s, 
-        sport, 
-        rencontre, 
-        date, 
-	    lieu, 
-	    m_or AS or, 
-		m_ar AS ar, 
-		m_br AS br,
-	    resultat,
-	    position, 
-	    temps, 
-	    points
-	    FROM complet 
-	LEFT JOIN med_or ON complet.id = med_or.id 
-	LEFT JOIN med_ar ON med_or.id = med_ar.id 
-	LEFT JOIN med_br ON med_ar.id = med_br.id;
+CREATE OR REPLACE VIEW vue_pays AS
+SELECT
+	pays,
+	epreuve.nom AS epreuve,
+	epreuve.sexe AS s,
+	sport.nom AS sport,
+	rencontres.intitule AS rencontre,
+	rencontres.date AS date,
+	lieu.nom AS lieu,
+	resultat.id AS resultat,
+	resultat.position AS position,
+	resultat.temps AS temps,
+	resultat.points AS points
+FROM joueurs, resultat, epreuve, sport, lieu, rencontres, joueurs_resultat
+WHERE (joueurs.id = joueurs_resultat.joueurs AND joueurs_resultat.resultat = resultat.id)
+	AND (resultat.epreuve = epreuve.id)
+	AND (resultat.rencontres = rencontres.id)
+	AND (epreuve.sport = sport.id)
+	AND (epreuve.lieu = lieu.id)
+ORDER BY pays;
+
+--Une vue attrape tout pour pouvoir trouver facilemenet des erreurs/liens entre les tables
+CREATE OR REPLACE VIEW vue_brut AS
+	WITH RECURSIVE
+		med_or AS (SELECT id, COUNT(position) AS m_or FROM complet WHERE position = '1' GROUP BY id),
+		med_ar AS (SELECT id, COUNT (position) AS m_ar FROM complet WHERE position = '2' GROUP BY id),
+		med_br AS (SELECT id, COUNT (position) AS m_br FROM complet WHERE position = '3' GROUP BY id),
+		complet AS (SELECT joueurs.id AS id,
+			joueurs.prenom||', '||joueurs.nom AS nom,
+			pays,
+			joueurs.sexe AS sexe,
+			age,
+			epreuve.id||', '||epreuve.nom||', '||epreuve.sexe AS epreuve,
+			sport.id||', '||sport.nom AS sport,
+			rencontres.id||', '||rencontres.intitule AS rencontre,
+			rencontres.date AS date,
+			lieu.id||', '||lieu.nom AS lieu,
+			resultat.id AS resultat,
+			resultat.position AS position,
+			resultat.temps AS temps,
+			resultat.points AS points
+		FROM joueurs, resultat, epreuve, sport, lieu, rencontres, joueurs_resultat
+		WHERE (joueurs.id = joueurs_resultat.joueurs AND joueurs_resultat.resultat = resultat.id)
+			AND (resultat.epreuve = epreuve.id)
+			AND (resultat.rencontres = rencontres.id)
+			AND (epreuve.sport = sport.id)
+			AND (epreuve.lieu = lieu.id))
+	SELECT complet.id,
+			nom,
+			pays,
+			sexe,
+			age,
+			epreuve,
+			sport,
+			rencontre,
+			date,
+			lieu,
+			m_or AS or,
+			m_ar AS ar,
+			m_br AS br,
+			resultat,
+			position,
+			temps,
+			points
+			FROM complet
+		LEFT JOIN med_or ON complet.id = med_or.id
+		LEFT JOIN med_ar ON med_or.id = med_ar.id
+		LEFT JOIN med_br ON med_ar.id = med_br.id
+		ORDER BY id ASC;
