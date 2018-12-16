@@ -22,7 +22,7 @@ INSERT INTO epreuve (sexe,nom,sport,collectif,lieu) VALUES
 -- Natation
 -- Phelps
 --Nelson
-13
+
 ('m','Relais 4x100 metres nage libre',2,true,3), -- USA first
 ('m','200 metres papillon',2,false,3),
 

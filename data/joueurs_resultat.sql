@@ -8,7 +8,7 @@ INSERT INTO joueurs_resultat (joueurs, resultat) VALUES
 --200m e 5 r 2
 (4,4),
 (5,5),
-(6,6);
+(6,6),
 --400m e 6 r 3
 (7,7),
 (8,8),
@@ -329,7 +329,7 @@ INSERT INTO joueurs_resultat (joueurs, resultat) VALUES
 (141,90),
 --T2 KORvBRA r 36
 (140,91),
-(142),92,
+(142,92),
 --T3 BRAvUKR r 37
 (141,93),
 (142,94),
