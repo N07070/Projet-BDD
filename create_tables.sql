@@ -2,6 +2,7 @@
 DROP VIEW IF EXISTS vue_joueurs;
 DROP VIEW IF EXISTS vue_pays;
 DROP VIEW IF EXISTS vue_brut;
+DROP VIEW IF EXISTS vue_brut_full;
 DROP TABLE IF EXISTS joueurs_resultat;
 DROP TABLE IF EXISTS Resultat;
 DROP TABLE IF EXISTS Joueurs;
@@ -207,7 +208,7 @@ SELECT complet.id,
 		sp_id,
 		sport,
 		rn_id,
-		rencontre
+		rencontre,
 		date,
 		li_id,
 		lieu,
