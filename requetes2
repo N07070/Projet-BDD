@@ -1,0 +1,1 @@
+1 _ SELECT prenom,nom FROM joueurs JOIN (SELECT * FROM joueurs_resultat JOIN resultat ON joueurs_resultat.resultat = resultat.id WHERE position = '1' OR position = '2' OR position = '3') AS res ON res.joueurs = joueurs.id WHERE pays = 'ITA';

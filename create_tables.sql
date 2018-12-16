@@ -1,4 +1,5 @@
 -- Supprimer les anciennes tables
+DROP VIEW IF EXISTS complet;
 DROP TABLE IF EXISTS joueurs_resultat;
 DROP TABLE IF EXISTS Resultat;
 DROP TABLE IF EXISTS Joueurs;

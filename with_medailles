@@ -1,0 +1,7 @@
+WITH medailles_or AS (SELECT id, SUM(position) AS m_or FROM complet WHERE position = '1' GROUP BY id),
+	medailles_ar AS (SELECT id, SUM (position) AS m_ar FROM complet WHERE position = '2' GROUP BY id),
+	medailles_br AS (SELECT id, SUM (position) AS m_br FROM complet WHERE position = '3' GROUP BY id)
+SELECT prenom, nom, pays, sexe, age, m_or, m_ar, m_br FROM complet, medailles_or, medailles_ar, medailles_br 
+WHERE complet.id = medailles_or.id 
+AND complet.id = medailles_ar.id
+AND complet.id = medailles_br.id;
