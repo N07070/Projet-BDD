@@ -95,8 +95,8 @@ SELECT pays FROM vue_brut
 -- Requête inventé 1
 SELECT DISTINCT(nom), sport FROM vue_brut WHERE temps > '00:01:00.000' AND position > 2;
 -- Requête inventé 2
-
+SELECT 
 -- Requête inventé 3
-
+SELECT DISTINCT(date), DISTINCT(sport) WHERE collectif = 'true' AND ep_sexe = 'f';
 --- Tests
 \echo "TESTING - TESTING - TESTING - TESTING"

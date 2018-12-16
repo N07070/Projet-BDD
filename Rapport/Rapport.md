@@ -118,7 +118,7 @@ Pour la question 3, nous avions 3 requêtes à inventer.
 
 * Les pays ayant la parité homme/femme.
 
-* Les épreuves ayant eu lieu au même endroit et à la même date mais n'étant que des sport collectifs féminins.
+* Les épreuves ayant eu lieu à la même date mais n'étant que des sport collectifs féminins.
 
 ### Questions sur l'organisation et la prévision
 
